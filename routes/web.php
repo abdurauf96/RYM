@@ -13,6 +13,11 @@ use App\Http\Controllers\MainController;
 |
 */
 
+Route::get('/locale/{locale}', function ($locale) {
+    session(['locale'=>$locale]);
+     return back();
+});
+
 Route::get('/', [MainController::class, 'home'])->name('home');
 Route::get('/about', [MainController::class, 'about'])->name('about');
 Route::get('/leadership', [MainController::class, 'leadership'])->name('leadership');

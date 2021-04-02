@@ -60,7 +60,11 @@
                         </div>
                         <div class="header-top-lang pos-r">
                             <div class="header-top-lang-top d-f align-items-center">
-                                <p class="header-top-lang-title mr-l">ЎЗБ</p>
+                                <p class="header-top-lang-title mr-l">
+                                    @php
+                                        $lang=app()->getLocale();
+                                    @endphp
+                                    @if($lang=='uz') ЎЗБ @elseif($lang=='ru') Рус @else ENG @endif </p>
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -70,13 +74,13 @@
                             </div>
                             <ul class="header-top-lang-bottom">
                                 <li class="header-top-lang-bottom-item">
-                                    <a href="" class="header-top-lang-bottom-link">Uzbek</a>
+                                    <a href="/locale/uz" class="header-top-lang-bottom-link">Uzbek</a>
                                 </li>
                                 <li class="header-top-lang-bottom-item">
-                                    <a href="" class="header-top-lang-bottom-link">English</a>
+                                    <a href="/locale/en" class="header-top-lang-bottom-link">English</a>
                                 </li>
                                 <li class="header-top-lang-bottom-item">
-                                    <a href="" class="header-top-lang-bottom-link">Russian</a>
+                                    <a href="/locale/ru" class="header-top-lang-bottom-link">Russian</a>
                                 </li>
                             </ul>
                         </div>
