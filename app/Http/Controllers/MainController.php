@@ -9,7 +9,8 @@ class MainController extends Controller
     public function home()
     {
         $sliders=\App\Models\Slider::withTranslation(\App::getLocale())->get();
-        return view('welcome', compact('sliders'));
+        $latest_news=\App\Models\News::withTranslation(\App::getLocale())->limit(3)->latest()->get();
+        return view('welcome', compact('sliders', 'latest_news'));
     }
 
     public function about()
@@ -49,7 +50,17 @@ class MainController extends Controller
 
     public function news()
     {
-        return view('news');
+        $news=\App\Models\News::withTranslation(\App::getLocale())->paginate(1);
+        return view('news', compact('news'));
+    }
+
+    public function viewNews($slug)
+    {
+        $news=\App\Models\News::whereSlug($slug)->withTranslation(\App::getLocale())->first();
+        $news->view=$news->view+1;
+        $news->save();
+        $other_news=\App\Models\News::where('category_id', $news->category_id)->where('slug', '!=', $slug)->withTranslation(\App::getLocale())->get();
+        return view('viewNews', compact('news', 'other_news'));
     }
 
     public function posts()
@@ -57,15 +68,21 @@ class MainController extends Controller
         return view('posts');
     }
 
+    public function viewPost($slug)
+    {
+        return view('viewPost');
+    }
+
     public function oav()
     {
         return view('oav');
     }
 
-    public function detail($slug)
+    public function viewOav()
     {
-        return view('detail');
+        return view('viewOav');
     }
+
 
     public function regions()
     {

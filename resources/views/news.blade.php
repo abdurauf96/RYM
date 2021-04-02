@@ -25,130 +25,31 @@
                 </div>
             </div>
             <div class="news-page-block">
+                @foreach ($news as $item)
                 <div class="news-page-item">
                     <div class="news-slider-item">
                         <div class="news-slider-img news-page-img">
-                            <img src="/images/news.png" alt="">
-                            <p class="news-page-badge">ACCOUNTING</p>
+                            <img src="{{ Voyager::image($item->image_view) }}" alt="">
+                            <p class="news-page-badge">{{ $item->category->getTranslatedAttribute('name', \App::getLocale()) }}</p>
                         </div>
                         <div class="news-page-date-block">
-                            <p class="news-page-date">23 - November 2020</p>
-                            <p class="news-page-date">12:20</p>
+                            <p class="news-page-date">{{ $item->created_at->format('d - M Y') }}</p>
+                            <p class="news-page-date">{{ $item->created_at->format('h:m') }}</p>
                         </div>
-                        <div class="news-slider-title news-page-title">Elmna’s in Silicon Valley: Finance vs Family
+                        <div class="news-slider-title news-page-title">{{ $item->getTranslatedAttribute('title', \App::getLocale()) }}
                         </div>
                         <!-- <p class="news-slider-date">Noyabr 12</p> -->
-                        <div class="news-slider-text news-page-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do
-                            eiusmod tempor incididunt ut ...</div>
+                        <div class="news-slider-text news-page-text">{{ $item->getTranslatedAttribute('description', \App::getLocale()) }}</div>
                         <div class="news-page-link-wrap">
-                            <a href="" class="news-slider-link news-page-link">Batafsil</a>
+                            <a href="{{ route('viewNews', $item->slug) }}" class="news-slider-link news-page-link">Batafsil</a>
                         </div>
                     </div>
                 </div>
-                <div class="news-page-item">
-                    <div class="news-slider-item">
-                        <div class="news-slider-img news-page-img">
-                            <img src="/images/news.png" alt="">
-                            <p class="news-page-badge">ACCOUNTING</p>
-                        </div>
-                        <div class="news-page-date-block">
-                            <p class="news-page-date">23 - November 2020</p>
-                            <p class="news-page-date">12:20</p>
-                        </div>
-                        <div class="news-slider-title news-page-title">Elmna’s in Silicon Valley: Finance vs Family
-                        </div>
-                        <!-- <p class="news-slider-date">Noyabr 12</p> -->
-                        <div class="news-slider-text news-page-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do
-                            eiusmod tempor incididunt ut ...</div>
-                        <div class="news-page-link-wrap">
-                            <a href="" class="news-slider-link news-page-link">Batafsil</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-page-item">
-                    <div class="news-slider-item">
-                        <div class="news-slider-img news-page-img">
-                            <img src="/images/news.png" alt="">
-                            <p class="news-page-badge">ACCOUNTING</p>
-                        </div>
-                        <div class="news-page-date-block">
-                            <p class="news-page-date">23 - November 2020</p>
-                            <p class="news-page-date">12:20</p>
-                        </div>
-                        <div class="news-slider-title news-page-title">Elmna’s in Silicon Valley: Finance vs Family
-                        </div>
-                        <!-- <p class="news-slider-date">Noyabr 12</p> -->
-                        <div class="news-slider-text news-page-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do
-                            eiusmod tempor incididunt ut ...</div>
-                        <div class="news-page-link-wrap">
-                            <a href="" class="news-slider-link news-page-link">Batafsil</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-page-item">
-                    <div class="news-slider-item">
-                        <div class="news-slider-img news-page-img">
-                            <img src="/images/news.png" alt="">
-                            <p class="news-page-badge">ACCOUNTING</p>
-                        </div>
-                        <div class="news-page-date-block">
-                            <p class="news-page-date">23 - November 2020</p>
-                            <p class="news-page-date">12:20</p>
-                        </div>
-                        <div class="news-slider-title news-page-title">Elmna’s in Silicon Valley: Finance vs Family
-                        </div>
-                        <!-- <p class="news-slider-date">Noyabr 12</p> -->
-                        <div class="news-slider-text news-page-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do
-                            eiusmod tempor incididunt ut ...</div>
-                        <div class="news-page-link-wrap">
-                            <a href="" class="news-slider-link news-page-link">Batafsil</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
 
             <div class="news-page-paginate">
-                <button type="button" class="news-page-paginate-btn">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0)">
-                            <path
-                                d="M11.4165 0.0639724L3.45917 8.03197L11.3728 15.936L12.496 14.8117L5.70557 8.03091L12.5408 1.18611L11.4165 0.0639724Z"
-                                fill="black" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0">
-                                <rect width="16" height="16" fill="white"
-                                    transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 16 16)" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-
-                    Previous
-                </button>
-                <ul class="news-page-paginate-links">
-                    <li class="news-page-paginate-links-item"><a href="" class="news-page-paginate-links-link">1</a>
-                    </li>
-                    <li class="news-page-paginate-links-item"><a href="" class="news-page-paginate-links-link">2</a>
-                    </li>
-                    <li class="news-page-paginate-links-item active"><a href=""
-                            class="news-page-paginate-links-link">3</a>
-                    </li>
-                    <li class="news-page-paginate-links-item"><a href="" class="news-page-paginate-links-link">4</a>
-                    </li>
-                </ul>
-                <button class="news-page-paginate-btn">
-                    Next
-                    <svg class="news-page-paginate-svg" width="10" height="16" viewBox="0 0 10 16" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M1.58349 0.0639724L9.54083 8.03197L1.62723 15.936L0.504029 14.8117L7.29443 8.03091L0.459228 1.18611L1.58349 0.0639724Z"
-                            fill="black" />
-                    </svg>
-                </button>
+                {{ $news->links('layouts.pagination') }}
             </div>
         </div>
     </div>
