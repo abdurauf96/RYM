@@ -8,7 +8,8 @@ class MainController extends Controller
 {
     public function home()
     {
-        return view('welcome');
+        $sliders=\App\Models\Slider::withTranslation(\App::getLocale())->get();
+        return view('welcome', compact('sliders'));
     }
 
     public function about()
