@@ -1,0 +1,1376 @@
+//min width 1200px
+@media screen and (min-width: 1200px) {
+
+  //min width 1200px
+}
+
+//min width 992px
+@media screen and (min-width: 992px) {
+
+  //min width 992px
+}
+
+//min width 768px
+@media screen and (min-width: 768px) {
+  
+
+  //min width 768px
+}
+
+//min width 576px
+@media screen and (min-width: 576px) {
+
+  //min width 576px
+}
+
+@media screen and (max-width: 1850px) {
+  
+.togarak-link{
+  text-align: center;
+}
+  //max width 1850px
+}
+@media screen and (max-width: 1710px) {
+  
+  //max width 1710px
+}
+@media screen and (max-width: 1640px) {
+
+}
+@media screen and (max-width: 1550px) {
+
+  .header-slider-img{
+    justify-content: flex-start;
+  }
+  
+
+  //max width 1550px
+}
+//max width 1450px
+@media screen and (max-width: 1450px) {
+  .togarak-modal-btn{
+    padding: 10px 50px;
+  }
+  .togarak-modal-form{
+    width: 800px;
+    padding: 30px 45px;
+  }
+  .error-item-btn{
+    margin-top: 30px;
+  }
+  .error-item-btn{
+    padding: 5px 65px;
+    font-size: 30px;
+  }
+  .error-item-text{
+    font-size: 30px;
+  }
+  .error-item-title{
+    font-size: 45px;
+  }
+  .error-item-img{
+    width: 400px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .numbers-info-number{
+    font-size: 50px;
+  }
+  .contact-map-info{
+    width: 550px;
+  }
+  .contact-form-wrap{
+    width: 100%;
+  }
+  .gallery-item{
+    width: calc(50% - 60px);
+  }
+  .hudud-wrap{
+    padding: 0 0px; 
+  }
+  // .header-pages{
+  //   padding-top: 170px;
+  // }
+  .master-talk-info{
+    padding-top: 175px;
+  }
+  .master-talk-img{
+    width: 300px;
+    height: 300px;
+  }
+  .events-email-title{
+    width: 50%;
+  }
+  .news-slider-date{
+        margin: 15px 20px;
+  }
+  .news-slider-date{
+    line-height: 15px;
+    margin: 0 20px;
+  }
+  .news-slider-title{
+    margin: 15px 20px;
+  }
+  .togarak-item{
+    width: 48%;
+  }
+  .togarak-block{
+    padding: 0 15px;
+  }
+  .teacher{
+    min-height: 770px;
+  }
+  .teacher-img{
+    width: 400px;
+    height: 400px;
+  }
+  .teacher-info{
+    width: 55%;
+  }
+  .teacher-title{
+    line-height: 80px;
+    font-size: 50px;
+  }
+  .title{
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .last-news-item{
+    padding: 0 25px;
+  }
+  .last-news-info-title{
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .last-news-block{
+    margin-top: 20px;
+  }
+  .last-news{
+    padding: 30px 0;
+  }
+  .header-nav-menu-item {
+    display: none;
+  }
+
+  .mobile-gamburger {
+    width: 40px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 30px;
+    cursor: pointer;
+  }
+
+  .mobile-gamburger span {
+    display: block;
+    height: 5px;
+    background: #fff;
+    border-radius: 20px;
+  }
+
+  .header-nav {
+    padding: 15px 0;
+  }
+
+  .rym-container {
+    max-width: 1170px;
+  }
+
+  .header-slider-title {
+    font-size: 35px;
+  }
+
+  .header-slider-img {
+    max-width: 450px;
+    height: 450px;
+  }
+
+  .hero-slider {
+    padding-top: 100px;
+  }
+  //max width 1450px
+}
+@media screen and (max-width: 1360px) {
+  
+//  //max width 1360px
+//}
+}
+
+//max width 1199px
+@media screen and (max-width: 1199px) {
+  .our-history-item{
+    width: 33.3%;
+    margin-top: 20px;
+  }
+  .our-history-block{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .our-history-line{
+    display: none;
+  }
+  .footer-arrow{
+    bottom: 5px;
+  }
+  .togarak-modal-btn {
+    padding: 5px 40px;
+}
+  .togarak-modal label{
+    font-size: 17px;
+  }
+  .togarak-modal-form-input{
+    height: 36px;
+  }
+  .togarak-modal-form{
+    width: 600px;
+  }
+  .last-news-title{
+    font-size: 35px;
+  }
+  .contact-form{
+    padding: 45px 60px;
+
+  }
+  .hudud-item{
+    width: 100%;
+  }
+  .topic-center-img{
+    height: 550px;
+  }
+  .topic-img-item{
+    height: 500px;
+  }
+  .rahbariyat-info-text{
+    font-size: 20px;
+  }
+  .rahbariyat-info-address{
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  .rahbariyat-info-title{
+    font-size: 40px;
+    line-height: 55px;
+  }
+  .rahbariyat-info{
+    width: 100%;
+    padding: 20px;
+  }
+  .rahbariyat-img{
+    width: 100%;
+  }
+  .rahbariyat-block{
+    flex-direction: column;
+  }
+  .news-page-item{
+    width: 50%;
+  }
+  .our-mark-slider{
+    width: 100%;  
+  }
+  .our-mark-slider-arrow.arrow-right{
+    top: 100%;
+    right: -30px;
+  }
+  .our-mark-slider-arrow.arrow-left{
+    top: 100%;
+    right: 75px;
+    left: auto; 
+  }
+  .our-team-item{
+    width: 23%;
+  }
+  .why-we-comment{
+    width: 100%;
+    margin-right: 0;
+  }
+  .why-we-wrap{
+    flex-direction: column;
+  }
+  .footer-info{
+    margin-left: 20px;
+  }
+  .footer-social{
+    margin-right: 20px;
+  }
+  .events-email-block{
+    margin-top: 100px;
+  }
+  .events-email{
+    margin-top: 20px;
+  }
+  .events-email-title{
+    width: 100%;
+  }
+  .events-email-block{
+    flex-direction: column;
+  }
+  .events-item:nth-child(2){
+    margin: 20px 20px 0 20px;
+  }
+  .events-item{
+    width: 47%;
+    margin-top: 20px;
+  }
+  .events-block{
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .togarak-item{
+    width: 100%;
+  }
+  .teacher-img{
+    width: 320px;
+    height: 320px;
+  }
+  .last-news-date strong{
+    font-size: 50px;
+  }
+  .last-news-date{
+    margin-right: 20px;
+  }
+  .last-news-item {
+    padding: 0 15px;
+}
+  .rym-container {
+    max-width: 960px;
+  }
+  //max width 1199px
+}
+
+//max width 991px
+@media screen and (max-width: 991px) {
+  .rahbariyat-img{
+    height: 375px;
+  }
+  .our-history-block{
+    padding: 50px 0;
+  }
+  .our-history-item{
+    width: 50%;
+  }
+  .togarak-success-block{
+    width: 80%;
+  }
+  .contact-map-info-social-icon{
+    width: 55px;
+    height: 55px;
+  }
+  .contact-map-info-social-name{
+    font-size: 18px;
+  }
+  .contact-map-info-title{
+    font-size: 30px;
+  }
+  .contact-map-info{
+    padding: 35px 40px;
+    width: 450px;
+  }
+  .advantages{
+    padding: 50px 0;
+  }
+  .own-events-text{
+    margin-top: 20px;
+  }
+  .title{
+    font-size: 40px;
+    line-height: 52px;
+  }
+  .own-events{
+    width: 85%;
+    padding: 50px 0 70px 0;
+  }
+  .last-news-title{
+    font-size: 30px;
+  }
+  .advantages-item{
+    padding: 40px 40px 40px 0;
+  }
+  .teacher::after{
+    display: none;
+  }
+  
+  .video-items-child{
+    width: 100%;
+  }
+  .gallery-item{
+    width: calc(100% - 60px);
+  }
+  .hudud-in-info{
+    margin-top: 120px;
+    margin-left: 0;
+  }
+  .hudud-in-block{
+    flex-direction: column;
+  }
+  .hudud-top-title-item{
+    font-size: 22px;
+  }
+  .hudud-top-title{
+    font-size: 30px;
+  }
+  .togarak-page-top-btn{
+    margin-top: 15px;
+  }
+  .togarak-page-top{
+    flex-direction: column;
+  }
+  .topic-img-item{
+    height: 400px;
+  }
+  .news-page-search{
+    width: 75%;
+  }
+  .documents-btn{
+    margin-top: 15px;
+  }
+  .documents-block{
+    flex-direction: column;
+  }
+  .our-team-item{
+    width: 31%;
+  }
+  .master-talk-block{
+    margin: 5%;
+  }
+  .footer-social{
+    margin-right: 0;
+  }
+  .footer-info{
+    width: 100%;
+  }
+  .footer-info {
+    margin-left: 0;
+    margin-top: 20px;
+}
+  .footer-menu-block{
+    width: 60%;
+    margin-top: 20px;
+  }
+  .footer-block{
+    flex-direction: column;
+  }
+
+  .numbers-info-item{
+    width: 50%;
+    margin-top: 15px;
+  }
+  .numbers-info-block{
+    flex-wrap: wrap;
+  }
+  .teacher-img{
+    margin-top: 20px;
+  }
+  .teacher{
+    padding: 50px;
+  }
+  .teacher-info{
+    width: 100%;
+  }
+  .teacher-block{
+    flex-direction: column;
+  }
+  .advantages-item{
+    width: 46%;
+  }
+  .cources .cources-slider-arrow.arrow-left{
+    right: 130px;
+    top: 115%;
+    left: auto;
+  }
+  .cources .cources-slider-arrow.arrow-right{
+    right: 20px;
+    top: 115%;
+  }
+  .cources-slider{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cources-slider-wrap{
+    position: initial;
+    padding-top: 80px;
+  }
+  .last-news-item:nth-child(2){
+    border-right: none;
+  }
+  .last-news-item{
+    width: 50%;
+    &:last-child{
+      width: 100%;
+    }
+  }
+
+  .last-news-block{
+    flex-wrap: wrap;
+  }
+  
+  .rym-container {
+    max-width: 720px;
+  }
+
+  .header-slider-img {
+    display: none;
+  }
+  .contact-map-block{
+    margin-bottom: 250px;
+  }
+
+  .header-slider-info {
+    width: calc(100vw - 15px);
+  }
+  //max width 991px
+}
+
+
+//max width 767px
+@media screen and (max-width: 767px) {
+  .clients-main{
+    padding-top: 50px!important;
+  }
+  .our-team-top-text{
+    width: 100%;
+  }
+  .header-slider-info::after{
+    display: none;
+  }
+  .news-page-filter .custom-select-button{
+    padding: 10px 45px 10px 20px;
+  }
+  .header-slider {
+    width: calc(100vw - 35px);
+  }
+
+  .togarak-modal .textarea-control{
+    margin-top: 10px;
+  }
+  .togarak-modal-form-group{
+    margin-top: 10px;
+  }
+  .togarak-modal-form-group-item-2{
+    width: 100%;
+    margin-top: 10px;
+  }
+  .togarak-modal-form-group-item-1{
+    width: 100%;
+    // margin-top: 10px;
+  }
+  .togarak-modal-form-group{
+    flex-direction: column;
+  }
+  .togarak-modal-form{
+    width: 80%;
+  }
+  .search-block{
+    width: 100%;
+  }
+  .search-header-page{
+    font-size: 28px;
+  }
+  .error-item{
+    width: 100%;
+  }
+  .error-block{
+    flex-direction: column;
+  }
+  .numbers-info-number{
+    font-size: 50px;
+  }
+  .header-slider-item{
+    width: 100%;
+  }
+  .contact-pages{
+    padding-top: 500px!important;
+  }
+  .contact-form-wrap{
+    margin-top: -500px;
+  }
+  .contact-send-btn{
+    font-size: 25px;
+    padding: 0px 50px;
+  }
+  .contact .form-num{
+    margin-top: 30px;
+  }
+  .contact-form-input{
+    padding: 10px 0;
+  }
+  .contact-email-mob{
+    margin-top: 20px;
+  }
+  .contact-form-group{
+    width: 100%;
+  }
+  .togarak-info-block{
+    width: 100%;
+  }
+  .hudud-in-top-parent{
+    flex-direction: column;
+  }
+  .hudud-top-title{
+    margin-left: 30px;
+    font-size: 25px;
+  }
+  .topic-slider-wrap .news-slider-arrow{
+    display: none!important;
+  }
+  .topic-header-social-right{
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .topic-header-social-left{
+    justify-content: center;
+  }
+  .topic-header-social{
+    flex-direction: column;
+  }
+  .header-pages-title{
+    line-height: 70px;
+    font-size: 65px;
+  }
+  
+  .news-page-item{
+    width: 100%;
+  }
+  .our-mark-slider-arrow{
+    width: 60px;
+    height: 60px;
+  }
+  .our-mark-slider-arrow.arrow-left{
+    top: 110%;
+    right: 90px;
+  }
+  .our-mark-slider-arrow.arrow-right{
+    top: 110%;
+    right: -10px;
+  }
+  .our-team-item{
+    width: 48%;
+  }
+  .why-we-item{
+    width: 100%;
+  }
+  .clients{
+    padding-top: 60px;
+  }
+  .master-talk-info{
+    padding-top: 140px;
+  }
+  .master-talk-img {
+    width: 250px;
+    height: 250px;
+    top: -130px;
+}
+  // .header-slider-item{
+  //   width: 500px!important;
+  // }
+  .events-item:nth-child(2){
+    margin: 20px 0 0 0;
+  }
+  .events-item{
+    width: 100%;
+  }
+  .news-top-text{
+    width: 100%;
+  }
+  .togarak-info-img{
+    margin-right: 0;
+  }
+  .togarak-info-text{
+    text-align: center;
+    max-height: 60px;
+  }
+  .togarak-info-title{
+    text-align: center;
+  }
+  .togarak-info-name{
+    text-align: center;
+  }
+  .togarak-info-block > div{
+    flex-direction: column;
+  }
+  .teacher-name{
+    margin-top: 20px;
+  }
+  .teacher-opinion{
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  .teacher-title {
+    line-height: 50px;
+    font-size: 40px;
+}
+  .teacher-title:after{
+    display: none;
+  }
+  .advantages-item{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cources-slider-info-block{
+    width: 100%;
+  }
+  .header-slider .slick-dots li{
+    margin: 0 15px;
+    display: none;
+  }
+  .header-slider .slick-dots{
+    left: 0;
+    top: 130%;
+    flex-direction: row;
+    
+  }
+  .last-news-item:nth-child(2){
+    border-left: none;
+    border-bottom: 1px solid #686868;
+    border-top: 1px solid #686868;
+  }
+
+  .last-news-item{
+    width: 100%;
+  }
+
+  
+  
+  //max width 767px
+}
+
+//max width 575px
+@media screen and (max-width: 575px) {
+  .hudud-info{
+    margin-right: auto;
+  }
+  .hudud-img{
+    width: 95%;
+    height: 200px;
+  }
+  .our-team-img{
+    height: 300px;
+  }
+  .our-team-item{
+    width: 100%;
+  }
+  .our-history-item{
+    width: 100%;
+  }
+  .contact-map{
+    height: 350px;
+  }
+  .contact-map-info{
+    position: initial;
+    margin-top: 30px;
+    width: 100%;
+  }
+  .contact-send-btn{
+    margin-top: 20px;
+  }
+  .contact-form-input {
+    padding: 5px 0;
+}
+  .contact-form-input{
+    font-size: 20px;
+    &::placeholder{
+      font-size: 20px;
+    }
+  }
+   .contact-form-textarea{
+    font-size: 20px;
+    &::placeholder{
+      font-size: 20px;
+    }
+  }
+  .contact-form-bottom{
+    flex-direction: column;
+  }
+  .contact-form-wrap{
+    margin-top: -350px;
+  }
+  .search-header-page{
+    margin-top: 0px;
+    padding-bottom: 35px;
+  }
+  .error-item-btn {
+    padding: 5px 55px;
+    font-size: 25px;
+}
+  .error-item-text{
+    font-size: 25px;
+  }
+  .error-item-title{
+    font-size: 35px;
+  }
+  .video-wrap-child {
+    height: 470px;
+  }
+  .video-wrap-child video{
+    height: 470px;
+  }
+  .hudud-in-slider{
+    width: 100%;
+  }
+  .hudud-top-title{
+    font-size: 30px;
+  }
+  .hudud-item{
+    flex-direction: column;
+  }
+  .togarak-page-master-info-text {
+    font-size: 22px;
+    font-weight: 400;
+    color: #000;
+    line-height: 40px;
+    margin-top: 20px;
+}
+  .togarak-page-master-info-pos{
+    font-size: 22px;
+  }
+  .togarak-page-master-info-name{
+    font-size: 25px;
+  }
+  .togarak-page-top-info{
+    flex-direction: column;
+  }
+  .togarak-page{
+    padding: 40px 0;
+  }
+  .topic-like-btn{
+    font-size: 20px;
+  }
+  .topic-img-item{
+    height: 300px;
+  }
+  .custom-select-button{
+    padding: 12px 25px;
+  }
+  .togarak-in-block{
+    padding: 0 30px;
+  }
+  .togarak-in{
+    padding: 40px 0;
+  }
+  .togarak-select-wrap{
+    width: 50%;
+  }
+  .togarak-in-block{
+    width: 100%;
+  }
+  .rahbariyat-info-btn{
+    width: 150px;
+    margin-top: 20px;
+  }
+  .rahabriyat-time-block{
+    flex-direction: column;
+  }
+  .rahbariyat-img{
+    height: 300px;
+  }
+  .header-pages-title{
+    padding: 5px 0;
+  }
+  .events-email-input{
+    width: 400px;
+  }
+  .events-email-btn {
+    padding: 10px 30px;
+  }
+  .cources .cources-slider-arrow{
+    width: 70px;
+    height: 70px;
+  }
+  .cources-slider-link-member{
+    padding: 10px 20px;
+    line-height: 30px;
+  }
+  .cources-slider-link-data{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .cources-slider-link{
+    display: flex;
+    flex-direction: column;
+  }
+
+  //max width 575px
+}
+
+//max width 480px
+@media screen and (max-width: 480px) {
+  .topic-img-item+.topic-img-item{
+    margin-top: 15px;
+  }
+  .topic-img-item{
+    width: 100%;
+    height: 270px;
+  }
+  .topic-img-block{
+    flex-direction: column;
+  }
+  .contact-map-block{
+    margin-bottom: 100px;
+  }
+  .hero-slider{
+    padding-top: 170px;
+  }
+  .footer-arrow{
+    bottom: 50px;
+  }
+  .togarak-success-btn{
+    padding: 9px 30px;
+  }
+  .togarak-modal label{
+    font-size: 16px;
+  }
+  .togarak-modal-form-input{
+    font-size: 14px;
+    &::placeholder{
+      font-size: 14px;
+    }
+  }
+  .togarak-modal-btn{
+    margin-top: 25px;
+  }
+  .togarak-modal-form{
+    padding: 15px 30px;
+  }
+  .contact-map-info{
+    padding: 20px 25px;
+  }
+  .contact-form {
+    padding: 40px 45px;
+}
+  .contact label{
+    font-size: 16px;
+  }
+  .header-pages-title{
+    font-size: 48px;
+  }
+  .search-hudud-text{
+    font-size: 18px;
+  }
+  .search-hudud{
+    font-size: 30px;
+  }
+  .search-title{
+    font-size: 30px;
+  }
+  .header-slider-btn{
+    padding: 9px 30px;
+  }
+  .search-header-page{
+    font-size: 20px;
+  }
+  .error-item-text{
+    font-size: 22px;
+  }
+  .error-item-title{
+    font-size: 30px;
+  }
+  .teacher-text{
+    margin-top: 12px;
+  }
+  .teacher-title{
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .cources-slider-info-title{
+    font-size: 20px;
+  }
+  .cources-slider-info-name{
+    font-size: 16px;
+  }
+  .numbers-info-title{
+    font-size: 20px;
+  }
+  .numbers-info-number{
+    font-size: 40px;
+  }
+  .video-items-child-video{
+    height: 400px;
+  }
+  .video-wrap-child {
+    height: 420px;
+  }
+  .video-wrap-child video{
+    height: 420px;
+  }
+  .gallery-text{
+    padding: 20px;
+  }
+  .hudud-in-info-item{
+    font-size: 30px;
+  }
+  .hudud-in-slider-arrow{
+    width: 60px;
+    height: 60px;
+  }
+  .hudud-in-slider-arrow.arrow-right{
+    right: 95px;
+  }
+  .hudud-in-slider-arrow.arrow-left {
+    left: 95px;
+  }
+  .hudud{
+    padding: 40px 0;
+  }
+  .hudud-top-title-item{
+    font-size: 18px;
+  }
+  .hudud-top-title{
+    font-size: 25px;
+    margin-left: 25px;
+  }
+  .togarak-page-master-info-text{
+    text-align: center;
+  }
+  .togarak-page-master-info-pos{
+    text-align: center;
+  }
+  .togarak-page-master-info-name{
+    text-align: center;
+  }
+  .togarak-page-master-info{
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .togarak-page-master-img{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .togarak-page-master-block{
+    flex-direction: column;
+  }
+  .togarak-page-master{
+    margin-top: 40px;
+  }
+  .togarak-page-master-title{
+    font-size: 28px;
+  }
+  .togarak-page-middle-text{
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .togarak-page-middle-title{
+    font-size: 25px;
+  }
+  .togarak-page-middle-info{
+    margin-top: 60px;
+  }
+  .togarak-page-img-item{
+    height: 250px;
+  }
+  .togarak-page-img-block{
+    padding: 0 25px;
+    margin-top: 50px;
+  }
+  .togarak-page-phrase-text, .togarak-page p{
+    font-size: 20px;
+  }
+  .faq-bottom{
+    font-size: 20px;
+    padding: 10px 20px 80px 20px;
+  }
+  .faq-top-title{
+    font-size: 20px;
+  }
+  .faq-top{
+    padding: 15px 20px;
+  }
+  .topic-slider-wrap{
+    padding: 30px 0;
+  }
+  .topic {
+    padding: 50px 0 0 0;
+}
+  .topic-center-img{
+    height: 400px;
+  }
+  .topic-header-social-left-item{
+    font-size: 23px;
+  }
+  .topic-header-social-right-title{
+    display: none;
+  }
+  .togarak-select-wrap + .togarak-select-wrap{
+    margin-left: 15px;
+  }
+  .custom-select-button{
+    padding: 12px;
+  }
+  .custom-select-list li{
+    font-size: 16px;
+  }
+  .custom-select-button{
+    font-size: 16px;
+  }
+  .cources-slider-info-loc{
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  .togarak-item{
+    margin-top: 30px;
+  }
+  .togarak-in-block{
+    padding: 0;
+  }
+  .rahbariyat-info-address{
+    font-size: 20px;
+  }
+  .rahbariyat-info-title {
+    font-size: 30px;
+    line-height: 40px;
+}
+  .ustav-top-title{
+    padding: 15px 30px;
+    font-size: 20px;
+  }
+  .news-page-paginate-btn{
+    padding: 8px 18px;
+  }
+  .news-page-paginate-links{
+    margin: 10px;
+  }
+  .news-page-paginate{
+    flex-direction: column;
+  }
+  .news-page-date-block {
+    width: 100%;
+    padding: 20px 20px 0 20px;
+  }
+  .news-page-date{
+    font-size: 17px;
+  }
+  .news-page-badge{
+    font-size: 14px;
+  }
+  .news-slider-text{
+    margin: 20px;
+  }
+  .news-slider-title{
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .news-page-search{
+    margin-top: 12px;
+    width: 80%;
+  }
+  .news-page-search{
+    height: 50px;
+  }
+  .documents-in-block{
+    margin-top: 20px;
+  }
+  .documents-in-block-title{
+    font-size: 23px;
+  }
+  .documents-in-title{
+    font-size: 35px;
+  }
+  .documents-in{
+    padding: 40px 0;
+  }
+  .documents-icon-block{
+    justify-content: center;
+  }
+  .documents-title{
+    text-align: center;
+  }
+  .events-email-title{
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .our-mark-title{
+    text-align: center;
+  }
+  .our-mark-block{
+    flex-direction: column;
+    align-items: center;
+  }
+  .our-team-title{
+    padding: 12px;
+  }
+  .our-team-img{
+    height: 190px;
+  }
+  .master-talk-img {
+    width: 170px;
+    height: 170px;
+    top: -95px;
+}
+  .master-talk-info{
+    padding-top: 90px!important;
+  }
+  .events-email-input{
+    width: 312px;
+  }
+  .footer-menu-block{
+    width: 100%;
+  }
+  .news-slider-btn{
+    padding: 5px 25px;
+  }
+  .news .news-slider-arrow{
+    width: 55px;
+    height: 55px;
+    bottom: -105px;
+  }
+  .togarak-btn{
+    width: 100%;
+  }
+  .numbers-info-item{
+    width: 100%;
+  }
+  .teacher {
+    padding: 20px 0;
+}
+  .advantages{
+    padding: 35px 0;
+  }
+  .cources-slider-info-name{
+    line-height: 25px;
+  }
+  .cources .cources-slider-arrow{
+    width: 60px;
+    height: 60px;
+  }
+  .cources-slider-link-data{
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+  .cources-slider-link{
+    flex-direction: row;
+    margin-left: auto;
+  }
+  .cources-slider-info-block{
+    flex-direction: column;
+    align-items: flex-start!important;
+  }
+  .own-events-name{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .title{
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .own-events{
+    padding: 30px 0 35px 0;
+    width: 95%;
+  }
+  .header-top-lang-bottom{
+    top: 70%;
+  }
+  .header-top-social-email{
+    margin-left: 0;
+  }
+  .header-top-social{
+    flex-direction: column;
+  }
+  .header-nav-search-wrap{
+    display: none;
+  }
+ 
+
+  //max width 480px
+}
+//max width 443px
+@media screen and (max-width: 400px) {
+  .contact-form {
+    padding: 30px 25px;
+}
+  .search-title{
+    font-size: 25px;
+  }
+  .header-slider .slick-dots{
+    top: 115%;
+  }
+  .error-item-btn {
+    padding: 5px 45px;
+    font-size: 22px;
+}
+  .error-item-text{
+    font-size: 20px;
+  }
+  .error-item-title{
+    font-size: 25px;
+  }
+  .error-item-img{
+    width: 100%;
+  }
+  .video-items-child-video{
+    height: 350px;
+  }
+  .video-wrap-child {
+    height: 370px;
+  }
+  .video-wrap-child video{
+    height: 370px;
+  }
+  .gallery-date{
+    font-size: 12px;
+  }
+  .gallery-text{
+    font-size: 15px;
+  }
+  .hudud-in-info-item{
+    font-size: 25px;
+  }
+  .hudud-in-slider-arrow.arrow-right{
+    right: 55px;
+  }
+  .hudud-in-slider-arrow.arrow-left {
+    left: 55px;
+  }
+  .hudud-top-title-item{
+    margin-left: 0;
+  }
+  .hudud-top-title-item::after{
+    display: none;
+  }
+  .hudud-in-top-wrap{
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .hudud-top-title{
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  .hudud-select-wrap .custom-select-button{
+    padding: 12px 50px 12px 25px;
+    font-size: 18px;
+  }
+  
+  .togarak-page-img-item+.togarak-page-img-item{
+    margin-top: 15px;
+  }
+  .togarak-page-img-item{
+    width: 100%;
+  }
+  .togarak-page-img-block{
+    flex-wrap: wrap;
+  }
+  .topic-img-item{
+    height: 220px;
+  }
+  .rahbariyat-info-title{
+    font-size: 25px;
+  }
+  .our-team-img {
+    height: 230px;
+}
+  .our-team-item{
+    width: 98%;
+  }
+  
+  .events-badge{
+        padding: 5px 15px 5px 5px;
+  }
+  .news .news-slider-arrow.arrow-right{
+    left: 75px;
+  }
+  
+  //max width 480px
+}

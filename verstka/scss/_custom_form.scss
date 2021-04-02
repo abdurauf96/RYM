@@ -1,0 +1,42 @@
+@mixin checkbox($class ) {
+  .#{$class} {
+    &-control[type="checkbox"] {
+      display: none;
+      &:checked + label::after{
+        transform: scale(1);
+      }
+    }
+
+    &-label {
+      position: relative;
+      padding-left: 50px;
+      min-height: 30px;
+
+
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 30px;
+        left: 0;
+      }
+
+      &::before {
+        border: 1px solid #bebebe;
+        border-radius: 10px;
+        margin-top: -15px;
+      }
+
+      &::after {
+        transition: .2s;
+        transform: scale(0);
+        margin-top: -13px;
+        background: url('../images/check-icon.png') no-repeat center center /15px;
+      }
+    }
+  }
+}
+
+
+@include checkbox('checkbox-form');

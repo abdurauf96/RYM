@@ -1,0 +1,449 @@
+//mixins
+@mixin fixImg($width, $height, $cover: true) {
+  @extend .fx-c;
+  img {
+    width: $width;
+    height: $height;
+    @if $cover {
+      object-fit: cover;
+    } @else {
+      object-fit: contain;
+    }
+  }
+}
+
+//select mixin
+@mixin selectMixin($height, $border-radius:0) {
+  .input-select + .select2-container--default {
+    .select2-selection--single {
+      background: #edf3f8;
+      border: none;
+      border-radius: $border-radius;
+      height: $height;
+    }
+
+    .select2-selection__rendered {
+      height: $height;
+      line-height: $height;
+      padding: 0 30px;
+    }
+
+    .select2-selection__arrow {
+      height: $height;
+      @content
+    }
+  }
+  //mixins
+}
+
+//darken background on hover
+@mixin darkenBackground($color, $percentage: 10%) {
+  background-color: $color;
+  @extend .transition;
+  &:hover {
+    background-color: darken($color, $percentage);
+  }
+}
+
+//darken background on hover
+
+
+//++++++++
+//++++ | media | ++++
+//++++++++
+.media-box {
+  display: flex;
+  align-items: flex-start;
+
+  &-img {
+    flex: 0 0 160px;
+    width: 160px;
+    margin-right: 40px;
+
+    &.background {
+      img {
+        background: #edf3f8;
+      }
+    }
+
+    &.cover {
+      @include fixImg(160px, 160px)
+    }
+
+    &.contain {
+      @include fixImg(160px, 160px, false)
+    }
+  }
+}
+
+.round-img {
+  border-radius: 50%;
+}
+
+//media
+
+
+//++++++++
+//++++ | base | ++++
+//++++++++
+%transition, .transition {
+  transition: .25s;
+}
+
+%cur-p, .cur-p {
+  cursor: pointer;
+  //base
+}
+
+
+
+//++++++++
+//++++ | form | ++++
+//++++++++
+input,
+input:hover,
+input:focus,
+select:hover,
+select:focus {
+  outline: none;
+}
+
+.form-action {
+  padding-top: 30px;
+}
+
+.element-add-btn {
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  right: initial !important;
+  @extend .pos-a, .cur-p;
+}
+
+.input-pad {
+  padding-right: 90px;
+}
+
+.form-group {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @extend .pos-r;
+  @at-root &.radio {
+    label {
+      padding-left: 45px;
+      @extend .pos-r, .cur-p;
+
+      &::before, &::after {
+        content: '';
+        @extend .pos-a;
+      }
+
+      &::after {
+        width: 12px;
+        height: 12px;
+        left: 6px;
+        top: 4px;
+        background: $blue-col;
+        border-radius: 50%;
+        z-index: 1;
+        transform: scale(0);
+        @extend .transition
+      }
+
+      &::before {
+        left: 0;
+        width: 24px;
+        height: 24px;
+        top: 50%;
+        margin-top: -12px;
+        border-radius: 50%;
+        background: #f5f5f5;
+      }
+    }
+
+
+    input {
+      display: none;
+
+      &:checked + label::after {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .form-add-btn {
+    bottom: 20px;
+    right: 10px;
+    z-index: 2;
+    @extend .pos-a, .cur-p;
+  }
+
+  input + input {
+    margin-top: 10px;
+  }
+
+  .checkbox-label {
+    padding-left: 30px;
+    @extend .pos-r, .cur-p, .ifx-c;
+
+    &-icon {
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #edf3f8;
+      @extend .pos-a, .ifx-c;
+    }
+
+    input[type=checkbox] {
+      display: none;
+
+      + span img {
+        opacity: 0;
+        @extend .transition
+      }
+
+      &:checked {
+        & + span img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.x-padding {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  .file-input-label {
+    min-height: 110px;
+  }
+
+  input, select, textarea {
+    &:focus, &:active {
+      outline: none;
+    }
+  }
+
+
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=number],
+  select,
+  .file-input-label {
+    height: 50px;
+    border: none;
+    background: #f5f5f5;
+    padding: 0 30px;
+    width: 100%;
+  }
+
+  textarea {
+    height: 200px;
+    border: none;
+    background: #f5f5f5;
+    padding: 30px;
+    width: 100%;
+  }
+
+  @include selectMixin(50px, 10px)
+
+}
+
+input.semi-placeholder {
+  &::placeholder {
+    font-weight: 600;
+  }
+}
+
+.x-margin {
+  margin-left: -23px;
+  margin-right: -23px;
+}
+
+.btn {
+  min-height: 50px;
+  padding: 0 25px;
+  @extend .text-upper, .f-semi;
+
+  &.prime-btn {
+    height: 60px;
+    color: #fff;
+    @include darkenBackground(#fb4d39, 15%);
+  }
+
+  //end form
+}
+
+
+//++++++++
+//++++ | color | ++++
+//++++++++
+
+.wh-col {
+  color: #fff;
+  //color
+}
+
+.blue-col {
+  color: $blue-col;
+}
+
+.ov-h {
+  overflow: hidden;
+}
+
+.t-a {
+  text-align: center;
+}
+
+
+//++++++++
+//++++ | display | ++++
+//++++++++
+.flex-50 {
+  flex: 1 1 50%;
+}
+
+.flex-auto {
+  flex: 0 0 auto;
+}
+
+.flex-33 {
+  flex: 0 0 percentage(1/3);
+}
+
+.d-f {
+  display: flex;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.d-ib {
+  display: inline-block;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.ifx-c {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+%fx-c, .fx-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //display
+}
+
+
+//++++++++
+//++++ | position | ++++
+//++++++++
+%pos-a, .pos-a {
+  position: absolute;
+}
+
+%pos-r, .pos-r {
+  position: relative;
+  //position
+}
+
+
+//++++++++
+//++++ | text | ++++
+//++++++++
+.font-heading {
+  font-family: $fontHeading, sans-serif;
+  font-weight: 900;
+}
+
+%f-semi, .f-semi {
+  font-weight: 600;
+}
+
+.f-small {
+  font-size: 15px;
+}
+
+%f-bold, .f-bold {
+  font-weight: 700;
+}
+
+%f-black, .f-black {
+  font-weight: 900;
+}
+
+.f-upper {
+  font-size: 1.22rem;
+}
+
+.f-18 {
+  font-size: 18px;
+}
+
+%text-upper, .text-upper {
+  text-transform: uppercase;
+  //text
+}
+
+
+//++++++++
+//++++ | spacing | ++++
+//++++++++
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.regular-line-height {
+  line-height: 1.8rem;
+}
+
+.line-height-2 {
+  line-height: 2rem;
+}
+
+@mixin spaceCreator($space, $directions) {
+  $nums: 1, 2, 3, 4, l;
+  @each $name, $direction in $directions {
+    @each $num in $nums {
+      @if $num == l {
+        .#{$name}-#{$num} {
+          #{$space}-#{$direction}: 0.5rem;
+        }
+      } @else {
+        .#{$name}-#{$num} {
+          #{$space}-#{$direction}: #{$num}rem;
+        }
+      }
+    }
+  }
+}
+
+$margin-directions: (
+        "ml": "left", "mr": "right", "mb": "bottom", "mt": "top"
+);
+$padding-directions: (
+        "pl": "left", "pr": "right", "pb": "bottom", "pt": "top"
+);
+
+
+@include spaceCreator(margin, $margin-directions);
+@include spaceCreator(padding, $padding-directions)
+
+
+
+

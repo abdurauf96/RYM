@@ -1,0 +1,34 @@
+@mixin importFont($font, $weight, $path) {
+  @font-face {
+    font-family: $font;
+    font-weight: $weight;
+    src: url($path);
+  }
+}
+
+$fontHeading: 'Lora';
+$fontHeadPath: '../fonts/Lora/';
+
+//++++++++++++++++++++++++++++++++++ | regular | ++++++++++++++++++++++++++++++++++
+@include importFont($fontHeading, 400, $fontHeadPath + 'Lora-Regular.ttf');
+
+//++++++++++++++++++++++++++++++++++ | medium | ++++++++++++++++++++++++++++++++++
+@include importFont($fontHeading, 500, $fontHeadPath + 'Lora-Medium.ttf');
+
+//++++++++++++++++++++++++++++++++++ | semiBold | ++++++++++++++++++++++++++++++++++
+@include importFont($fontHeading, 600, $fontHeadPath + 'Lora-SemiBold.ttf');
+
+//++++++++++++++++++++++++++++++++++ | Bold | ++++++++++++++++++++++++++++++++++
+@include importFont($fontHeading, 700, $fontHeadPath + 'Lora-Bold.ttf');
+
+//++++++++++++++++++++++++++++++++++ | Extra-Bold | ++++++++++++++++++++++++++++++++++
+// @include importFont($fontHeading, 800, $fontHeadPath + 'ofont.ru_Proxima Nova.ttf')
+
+
+//$fontBase: 'proximaNova';
+//$fontBasePath: '../fonts/proximaNova/';
+//++++++++++++++++++++++++++++++++++ | regular | ++++++++++++++++++++++++++++++++++
+//@include importFont($fontBase, 400, $fontBasePath + 'proximaRegular.otf')
+
+//++++++++++++++++++++++++++++++++++ | semiBold | ++++++++++++++++++++++++++++++++++
+//@include importFont($fontHeading, 600, $fontHeadPath + 'ProximaNova-SemiboldIt.ttf')

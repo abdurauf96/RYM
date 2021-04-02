@@ -1,0 +1,145 @@
+.app-navigation-drawer {
+    background: inherit;
+    padding: 50px 20px 50px 50px;
+    z-index: 999;
+}
+
+.app-navigation-drawer, .drawer-reveal, .modal-wrap {
+    top: 0;
+    left: 0;
+}
+
+.app-drawer-content, .app-navigation-drawer, .app-navigation-track, .drawer-reveal, .modal-overlay {
+    z-index: 999;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.p-fixed {
+    position: fixed;
+}
+
+.h-100, .img-cover {
+    height: 100%;
+}
+
+.img-cover, .w-100 {
+    width: 100%;
+}
+
+.app-navigation-drawer:before, .app-navigation:after, .app-navigation:before, .app-sidebar:after, .app-sidebar:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 2000px rgb(0 0 0 / 12%);
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.app-navigation-drawer:before, .app-navigation:before, .app-sidebar:before {
+    right: 0;
+    bottom: 0;
+    margin-right: -8px;
+    margin-bottom: -20px;
+}
+
+.app-drawer-content, .app-navigation-drawer, .app-navigation-track, .drawer-reveal, .modal-overlay {
+    z-index: 999;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.f-column {
+    flex-direction: column;
+}
+
+.child-center, .d-flex {
+    display: flex;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.drawer-reveal {
+    background: #214E40;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.app-navigation-drawer .app-layer {
+    background: rgba(33,78,64,.9);
+}
+
+.app-layer {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(33,78,64,.9);
+    transition: all .5s;
+}
+
+@media (max-width: 1399px) {
+    .drawer-content {
+        align-items: center;
+    }
+}
+
+@media (max-height: 768px) {
+    .drawer-content {
+        padding: 3.5vw 0 20px;
+    }
+}
+
+.drawer-content {
+    padding: 7.5vw 0 20px;
+}
+
+.f-full {
+    flex: 1;
+}
+
+.align-center, .child-center {
+    align-items: center;
+}
+
+.app-drawer-close {
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.drawer-content__right {
+    flex: 1;
+    align-self: center;
+}
+
+.drawer-content__middle {
+    width: calc(40% - 25px);
+    padding: 0 10px;
+}
+
+.drawer-content__left {
+    width: 20%;
+}
+
+@media (max-width: 1399px) {
+    .drawer-content__left, .left-controls {
+        display: none;
+    }
+}
