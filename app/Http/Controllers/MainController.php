@@ -12,7 +12,10 @@ class MainController extends Controller
         $latest_news=\App\Models\News::withTranslation(\App::getLocale())->limit(3)->latest()->get();
         $offer=\App\Models\Offer::withTranslation(\App::getLocale())->first();
         $best_courses=\App\Models\Course::where('featured', 1)->withTranslation(\App::getLocale())->get();
-        return view('welcome', compact('sliders', 'latest_news', 'offer', 'best_courses'));
+        $features=\App\Models\Feature::withTranslation(\App::getLocale())->get();
+        $numbers=\App\Models\Number::withTranslation(\App::getLocale())->get();
+        $opinion=\App\Models\Opinion::withTranslation(\App::getLocale())->first();
+        return view('welcome', compact('sliders', 'latest_news', 'offer', 'best_courses', 'features', 'opinion', 'numbers'));
     }
 
     public function about()

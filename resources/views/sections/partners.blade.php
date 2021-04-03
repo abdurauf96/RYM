@@ -2,24 +2,13 @@
     <div class="clients-title">Bizning hamkorlar</div>
     <div class="rym-container">
         <div class="clients-slider">
+            @foreach ($partners as $partner)
             <div class="clients-slider-item">
-                <img src="images/highlow.png" alt="">
+                <a href="{{ $partner->link ? $partner->link : '#'  }}" target="_blank">
+                    <img src="{{ Voyager::image($partner->image) }}" alt="">
+                </a>
             </div>
-            <div class="clients-slider-item">
-                <img src="images/boost.png" alt="">
-            </div>
-            <div class="clients-slider-item">
-                <img src="images/eimagine.png" alt="">
-            </div>
-            <div class="clients-slider-item">
-                <img src="images/highlow.png" alt="">
-            </div>
-            <div class="clients-slider-item">
-                <img src="images/boost.png" alt="">
-            </div>
-            <div class="clients-slider-item">
-                <img src="images/eimagine.png" alt="">
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('sections.partners', function($view){
+            $partners=\App\Models\Partner::all();
+            $view->with(compact('partners'));
+        });
     }
 }
