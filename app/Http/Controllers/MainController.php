@@ -15,7 +15,8 @@ class MainController extends Controller
         $features=\App\Models\Feature::withTranslation(\App::getLocale())->get();
         $numbers=\App\Models\Number::withTranslation(\App::getLocale())->get();
         $opinion=\App\Models\Opinion::withTranslation(\App::getLocale())->first();
-        return view('welcome', compact('sliders', 'latest_news', 'offer', 'best_courses', 'features', 'opinion', 'numbers'));
+        $news=\App\Models\News::withTranslation(\App::getLocale())->where('featured', 1)->get();
+        return view('welcome', compact('sliders', 'latest_news', 'offer', 'best_courses', 'features', 'opinion', 'numbers', 'news'));
     }
 
     public function about()
@@ -55,8 +56,8 @@ class MainController extends Controller
 
     public function news()
     {
-        $news=\App\Models\News::withTranslation(\App::getLocale())->paginate(1);
-        return view('news', compact('news'));
+        //$news=\App\Models\News::withTranslation(\App::getLocale())->paginate(1);
+        return view('news');
     }
 
     public function viewNews($slug)

@@ -5019,7 +5019,8 @@ header {
 
 .news-page-filter .custom-select {
   font-weight: 600;
-  color: #fff;
+  padding: 10px;
+  color: #009746;
   position: relative;
   font-size: 20px;
   cursor: pointer;

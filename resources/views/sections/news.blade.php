@@ -6,59 +6,20 @@
             aliqua</div>
 
         <div class="news-slider">
+            @foreach ($news as $new)
             <div class="news-slider-item">
                 <div class="news-slider-img">
-                    <img src="images/news.png" alt="">
+                    <img src="{{ Voyager::image($new->image_view) }}" alt="">
                 </div>
-                <a href="#" class="news-slider-title">Elmna’s in Silicon Valley: Finance vs Family</a>
-                <p class="news-slider-date">Noyabr 12</p>
-                <div class="news-slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut ...</div>
-                <a href="" class="news-slider-link">Batafsil</a>
+                <a href="{{ route('viewNews', $new->slug) }}" class="news-slider-title">{{ $new->getTranslatedAttribute('title', \App::getLocale()) }}</a>
+                <p class="news-slider-date">{{ $new->created_at->format('d M') }}</p>
+                <div class="news-slider-text">{{ $new->getTranslatedAttribute('description', \App::getLocale()) }}</div>
+                <a href="{{ route('viewNews', $new->slug) }}" class="news-slider-link">Batafsil</a>
             </div>
-            <div class="news-slider-item">
-                <div class="news-slider-img">
-                    <img src="images/news.png" alt="">
-                </div>
-                <a href="#" class="news-slider-title">Elmna’s in Silicon Valley: Finance vs Family</a>
-                <p class="news-slider-date">Noyabr 12</p>
-                <div class="news-slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut ...</div>
-                <a href="" class="news-slider-link">Batafsil</a>
-            </div>
-            <div class="news-slider-item">
-                <div class="news-slider-img">
-                    <img src="images/news.png" alt="">
-                </div>
-                <a href="#" class="news-slider-title">Elmna’s in Silicon Valley: Finance vs Family</a>
-                <p class="news-slider-date">Noyabr 12</p>
-                <div class="news-slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut ...</div>
-                <a href="" class="news-slider-link">Batafsil</a>
-            </div>
-            <div class="news-slider-item">
-                <div class="news-slider-img">
-                    <img src="images/news.png" alt="">
-                </div>
-                <a href="#" class="news-slider-title">Elmna’s in Silicon Valley: Finance vs Family</a>
-                <p class="news-slider-date">Noyabr 12</p>
-                <div class="news-slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut ...</div>
-                <a href="" class="news-slider-link">Batafsil</a>
-            </div>
-            <div class="news-slider-item">
-                <div class="news-slider-img">
-                    <img src="images/news.png" alt="">
-                </div>
-                <a href="#" class="news-slider-title">Elmna’s in Silicon Valley: Finance vs Family</a>
-                <p class="news-slider-date">Noyabr 12</p>
-                <div class="news-slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut ...</div>
-                <a href="" class="news-slider-link">Batafsil</a>
-            </div>
+            @endforeach
         </div>
-        <div class="d-f justify-content-end">
+        {{-- <div class="d-f justify-content-end">
             <a href="" class="news-slider-btn">Load More</a>
-        </div>
+        </div> --}}
     </div>
 </div>

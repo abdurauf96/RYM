@@ -21,7 +21,7 @@
         Previous
     </button>
     @else
-    <a href="{{ $paginator->previousPageUrl() }}" class="news-page-paginate-btn" >
+    <a href="#" wire:click="previousPage" class="news-page-paginate-btn" >
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0)">
                 <path
@@ -55,7 +55,7 @@
                     
                     <li class="news-page-paginate-links-item active"><a class="news-page-paginate-links-link " href="#">{{ $page }}</a></li>
                 @else
-                    <li class="news-page-paginate-links-item"><a class="news-page-paginate-links-link" href="{{ $url }}">{{ $page }}</a></li>
+                    <li class="news-page-paginate-links-item"><a class="news-page-paginate-links-link" href="#" wire:click="gotoPage({{$page}}) ">{{ $page }}</a></li>
                 @endif
             @endforeach
         @endif
@@ -63,7 +63,7 @@
     </ul>
     <!-- Next Page Link -->
     @if ($paginator->hasMorePages())
-        <a  class="news-page-paginate-btn" href="{{ $paginator->nextPageUrl() }}" >Next
+        <a  class="news-page-paginate-btn" wire:click="nextPage" href="#" >Next
             <svg class="news-page-paginate-svg" width="10" height="16" viewBox="0 0 10 16" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
