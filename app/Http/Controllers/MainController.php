@@ -10,7 +10,8 @@ class MainController extends Controller
     {
         $sliders=\App\Models\Slider::withTranslation(\App::getLocale())->get();
         $latest_news=\App\Models\News::withTranslation(\App::getLocale())->limit(3)->latest()->get();
-        return view('welcome', compact('sliders', 'latest_news'));
+        $offer=\App\Models\Offer::withTranslation(\App::getLocale())->first();
+        return view('welcome', compact('sliders', 'latest_news', 'offer'));
     }
 
     public function about()
