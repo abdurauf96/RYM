@@ -10,11 +10,11 @@ $(document).ready(function () {
         $('.ustav-bottom').slideToggle();
     });
 
-    try {
-        $('.edit-profile-select,.custom-select').customSelect()
-    } catch (e) {
+    // try {
+    //     $('.edit-profile-select,.custom-select').customSelect()
+    // } catch (e) {
 
-    }
+    // }
 
     $('.numbers-info-number > span').counterUp({ delay: 15, time: 2000 });
 

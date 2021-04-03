@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
         rel="stylesheet">
     <title>RYM</title>
+    @yield('styles')
+    @livewireStyles
 </head>
 
 <body>
@@ -254,6 +256,7 @@
     crossorigin="anonymous"></script>
 <script src="/js/main.js"></script>
 @yield('js')
+@livewireScripts
 </body>
 
 </html>

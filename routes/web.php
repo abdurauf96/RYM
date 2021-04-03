@@ -33,8 +33,8 @@ Route::get('/oav/{slug}', [MainController::class, 'viewOav'])->name('viewOav');
 Route::get('/regions', [MainController::class, 'regions'])->name('regions');
 Route::get('/regions/{slug}', [MainController::class, 'viewRegion'])->name('viewRegion');
 
-Route::get('/cources', [MainController::class, 'cources'])->name('cources');
-Route::get('/cources/{slug}', [MainController::class, 'viewCource'])->name('viewCource');
+Route::get('/courses', [MainController::class, 'cources'])->name('cources');
+Route::get('/courses/{slug}', [MainController::class, 'viewCource'])->name('viewCource');
 
 Route::get('/', [MainController::class, 'home'])->name('home');
 Route::get('/about', [MainController::class, 'about'])->name('about');

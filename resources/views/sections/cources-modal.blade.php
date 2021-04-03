@@ -26,7 +26,7 @@
     <div class="togarak-success-block">
         <!-- <div class="togarak-success-title">Ariza yuborildi!</div> -->
         <div class="togarak-success-img">
-            <img src="images/success.png" alt="">
+            <img src="/images/success.png" alt="">
         </div>
         <button type="button" class="togarak-success-btn">Yopish</button>
     </div>

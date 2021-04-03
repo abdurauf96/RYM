@@ -8,7 +8,7 @@
     @include('sections.partners')
     @include('sections.teacher-thoughts')
     @include('sections.numbers')
-    @include('sections.cources')
+    @livewire('courses-block-component')
     @include('sections.news')
     @include('sections.events')
     @include('sections.cources-modal')

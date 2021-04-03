@@ -2,7 +2,7 @@
 
 @section('breadcrumb')
 <div class="header-pages" style="background-image: url('/images/pages-bg.png');">
-    <h1 class="header-pages-title">Tuzilma</h1>
+    <h1 class="header-pages-title">{{ $course->getTranslatedAttribute('title', \App::getLocale()) }}</h1>
 </div>
 @endsection
 
@@ -14,7 +14,7 @@
                 <div class="togarak-page-top">
                     <div class="togarak-page-top-info">
                         <h5 class="togarak-page-top-title">To’garak tashkil etildi</h5>
-                        <div class="togarak-page-top-date">12.12.2020</div>
+                        <div class="togarak-page-top-date">{{ $course->created_date->format('d.m.Y') }}</div>
                         <div class="togarak-page-top-loc">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0)">
@@ -31,59 +31,39 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            Toshkent
+                            {{ $course->region->getTranslatedAttribute('name', \App::getLocale()) }}
                         </div>
                     </div>
                     <button class="togarak-page-top-btn togarakModal">Ariza yuborish</button>
                 </div>
                 <div class="togarak-page-phrase">
-                    <p class="togarak-page-phrase-text">Siz istemolchiga ta`sir o`tkazib o`z mahsulotingizni sotishni
-                        istaysizmi?
-                    </p>
-                    <p class="togarak-page-phrase-text">Siz istemolchiga ta`sir o`tkazib o`z mahsulotingizni sotishni
-                        istaysizmi?
-                    </p>
-                    <p class="togarak-page-phrase-text">Siz istemolchiga ta`sir o`tkazib o`z mahsulotingizni sotishni
-                        istaysizmi?
-                    </p>
-                    <p class="togarak-page-phrase-text">Siz istemolchiga ta`sir o`tkazib o`z mahsulotingizni sotishni
-                        istaysizmi?
-                    </p>
+                    {!! $course->getTranslatedAttribute('advantages', \App::getLocale()) !!}
+                    
                 </div>
+                @if ($course->images)
                 <div class="togarak-page-img-block">
+                    @php $images=json_decode($course->images) @endphp
+                    @foreach ($images as $image)
                     <div class="togarak-page-img-item">
-                        <img src="images/slider2.png" alt="">
+                        <img src="{{ Voyager::image($image) }}" alt="">
                     </div>
-                    <div class="togarak-page-img-item">
-                        <img src="images/grandMasterTalk.png" alt="">
-                    </div>
+                    @endforeach  
                 </div>
+                @endif
                 <div class="togarak-page-middle-info">
-                    <h4 class="togarak-page-middle-title">UNDA “MARKETING” TO`GARAGI SIZ UCHUN!!!</h4>
-                    <div class="togarak-page-middle-text">
-                        Ilk master klass 2021 yil 2 mart kuni soat 14:00da filialning majlislar zalida (101-xona)
-                        o`tkazilishi rejalashtirilgan.
-                        TO`GARAK AZOLIGIGA QABUL 01.03.2021 yil soat 18:00 gacha. (1-kurslar uchun 13 mart soat 17-00 gacha)
-                    </div>
+                    {!! $course->getTranslatedAttribute('body', \App::getLocale()) !!}
                 </div>
                 <div class="togarak-page-master">
                     <h4 class="togarak-page-master-title">Master-klass o`tkazuvchi
                     </h4>
                     <div class="togarak-page-master-block">
                         <div class="togarak-page-master-img">
-                            <img src="images/tek.png" alt="">
+                            <img src="{{ Voyager::image($course->teacher_photo) }}" alt="">
                         </div>
                         <div class="togarak-page-master-info">
-                            <h5 class="togarak-page-master-info-name">G‘aniyev Ibragim Mamadiyevich</h5>
-                            <div class="togarak-page-master-info-pos">Iqtisod fanlari nomzodi, dotsent</div>
-                            <div class="togarak-page-master-info-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Nunc praesent fames etiam porttitor arcu nec gravida. Tellus ut
-                                vulputate lectus aliquam velit, nibh ac. Nibh nibh iaculis pharetra, nibh. Varius elementum
-                                scelerisque dictum arcu
-                                velit in viverra posuere.
-                                Sed nisl a elementum aliquam pharetra tincidunt. Ac ac duis sed a ante malesuada venenatis
-                                vulputate. Nibh hac interdum
-                                ullamcorper vitae egestas. Eget quisque turpis sagittis eleifend risus, ac magna turpis.
+                            <h5 class="togarak-page-master-info-name">{{ $course->getTranslatedAttribute('teacher_name', \App::getLocale()) }}</h5>
+                            <div class="togarak-page-master-info-pos">{{ $course->getTranslatedAttribute('teacher_position', \App::getLocale()) }}</div>
+                            <div class="togarak-page-master-info-text">{{ $course->getTranslatedAttribute('teacher_about', \App::getLocale()) }}
                             </div>
                         </div>
                     </div>

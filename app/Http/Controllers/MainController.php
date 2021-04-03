@@ -11,7 +11,8 @@ class MainController extends Controller
         $sliders=\App\Models\Slider::withTranslation(\App::getLocale())->get();
         $latest_news=\App\Models\News::withTranslation(\App::getLocale())->limit(3)->latest()->get();
         $offer=\App\Models\Offer::withTranslation(\App::getLocale())->first();
-        return view('welcome', compact('sliders', 'latest_news', 'offer'));
+        $best_courses=\App\Models\Course::where('featured', 1)->withTranslation(\App::getLocale())->get();
+        return view('welcome', compact('sliders', 'latest_news', 'offer', 'best_courses'));
     }
 
     public function about()
@@ -107,7 +108,8 @@ class MainController extends Controller
 
     public function viewCource($slug)
     {
-        return view('viewCource');
+        $course=\App\Models\Course::whereSlug($slug)->withTranslation(\App::getLocale())->first();
+        return view('viewCource', compact('course'));
     }
 
     public function search()
