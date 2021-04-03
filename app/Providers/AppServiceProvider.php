@@ -27,5 +27,10 @@ class AppServiceProvider extends ServiceProvider
             $partners=\App\Models\Partner::all();
             $view->with(compact('partners'));
         });
+
+        view()->composer('layouts.index', function($view){
+            $link=\App\Models\Link::withTranslation(\App::getLocale())->first();
+            $view->with(compact('link'));
+        });
     }
 }

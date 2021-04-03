@@ -21,7 +21,7 @@ Route::get('/locale/{locale}', function ($locale) {
 Route::get('/documents', [MainController::class, 'documents'])->name('documents');
 Route::get('/documents/{slug}', [MainController::class, 'viewDocument'])->name('viewDocument');
 
-Route::get('/news', [MainController::class, 'news'])->name('news');
+Route::get('/news', [MainController::class, 'news'])->name('news'); //done++
 Route::get('/news/{slug}', [MainController::class, 'viewNews'])->name('viewNews'); //done++
 
 Route::get('/posts', [MainController::class, 'posts'])->name('posts');
@@ -33,8 +33,10 @@ Route::get('/oav/{slug}', [MainController::class, 'viewOav'])->name('viewOav');
 Route::get('/regions', [MainController::class, 'regions'])->name('regions');
 Route::get('/regions/{slug}', [MainController::class, 'viewRegion'])->name('viewRegion');
 
-Route::get('/courses', [MainController::class, 'cources'])->name('cources');
-Route::get('/courses/{slug}', [MainController::class, 'viewCource'])->name('viewCource');
+Route::get('/courses', [MainController::class, 'cources'])->name('cources'); //done ++
+Route::get('/courses/{slug}', [MainController::class, 'viewCource'])->name('viewCource'); //done ++
+
+Route::get('/event/{slug}', [MainController::class, 'viewEvent'])->name('viewEvent'); //done ++
 
 Route::get('/', [MainController::class, 'home'])->name('home');
 Route::get('/about', [MainController::class, 'about'])->name('about');

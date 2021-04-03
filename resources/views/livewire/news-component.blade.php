@@ -24,8 +24,8 @@
                         <p class="news-page-badge">{{ $item->category->getTranslatedAttribute('name', \App::getLocale()) }}</p>
                     </div>
                     <div class="news-page-date-block">
-                        <p class="news-page-date">{{ $item->created_at}}</p>
-                        <p class="news-page-date">{{ $item->created_at }}</p>
+                        <p class="news-page-date">{{ $item->created_at->format('d-M Y')}}</p>
+                        <p class="news-page-date">{{ $item->created_at->format('h:m') }}</p>
                     </div>
                     <div class="news-slider-title news-page-title">{{ $item->getTranslatedAttribute('title', \App::getLocale()) }}
                     </div>

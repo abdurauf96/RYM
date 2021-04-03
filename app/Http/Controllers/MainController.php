@@ -16,7 +16,14 @@ class MainController extends Controller
         $numbers=\App\Models\Number::withTranslation(\App::getLocale())->get();
         $opinion=\App\Models\Opinion::withTranslation(\App::getLocale())->first();
         $news=\App\Models\News::withTranslation(\App::getLocale())->where('featured', 1)->get();
-        return view('welcome', compact('sliders', 'latest_news', 'offer', 'best_courses', 'features', 'opinion', 'numbers', 'news'));
+
+        $events=\App\Models\Event::withTranslation(\App::getLocale())
+        ->where('featured', 1)
+        ->limit(3)
+        ->get();
+        
+
+        return view('welcome', compact('sliders', 'latest_news', 'offer', 'best_courses', 'features', 'opinion', 'numbers', 'news', 'events'));
     }
 
     public function about()
@@ -52,6 +59,18 @@ class MainController extends Controller
     public function contact()
     {
         return view('contact');
+    }
+
+    public function viewEvent($slug)
+    {
+        $event=\App\Models\Event::whereSlug($slug)->withTranslation(\App::getLocale())->first();
+        $event->view=$event->view+1;
+        $event->save();
+
+        $other_events=\App\Models\Event::where('slug', '!=', $slug)
+        ->withTranslation(\App::getLocale())
+        ->get();
+        return view('viewEvent', compact('event', 'other_events'));
     }
 
     public function news()
