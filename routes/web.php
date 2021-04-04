@@ -39,7 +39,7 @@ Route::get('/courses/{slug}', [MainController::class, 'viewCource'])->name('view
 Route::get('/event/{slug}', [MainController::class, 'viewEvent'])->name('viewEvent'); //done ++
 
 Route::get('/', [MainController::class, 'home'])->name('home'); //done++
-Route::get('/about', [MainController::class, 'about'])->name('about');
+Route::get('/about', [MainController::class, 'about'])->name('about'); //done ++
 Route::get('/leadership', [MainController::class, 'leadership'])->name('leadership');
 Route::get('/rules', [MainController::class, 'rules'])->name('rules');
 Route::get('/contact', [MainController::class, 'contact'])->name('contact');

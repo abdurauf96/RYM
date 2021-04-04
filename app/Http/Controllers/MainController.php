@@ -28,7 +28,12 @@ class MainController extends Controller
 
     public function about()
     {
-        return view('about');
+        $about=\App\Models\AboutPage::withTranslation(\App::getLocale())->first();
+        $histories=\App\Models\BlockHistory::withTranslation(\App::getLocale())->get();
+        $teams=\App\Models\Team::withTranslation(\App::getLocale())->get();
+        $opinions=\App\Models\SliderOpinion::withTranslation(\App::getLocale())->get();
+        $features=\App\Models\Feature::withTranslation(\App::getLocale())->get();
+        return view('about', compact('about','histories', 'teams', 'opinions', 'features'));
     }
 
     public function leadership()

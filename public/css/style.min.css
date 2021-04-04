@@ -4880,8 +4880,10 @@ header {
 
 .our-mark .rate:not(:checked) > label:before {
   content: '★ '; }
+  .our-mark .fill{
+    color: #c59b08 !important; }
 
-.our-mark .rate > input:checked ~ label {
+/* .our-mark .rate > input:checked ~ label {
   color: #ffc700; }
 
 .our-mark .rate:not(:checked) > label:hover,
@@ -4893,8 +4895,9 @@ header {
 .our-mark .rate > input:checked ~ label:hover,
 .our-mark .rate > input:checked ~ label:hover ~ label,
 .our-mark .rate > label:hover ~ input:checked ~ label {
-  color: #c59b08; }
+  color: #c59b08; } */
 
+ 
 .documents {
   padding: 70px 0; }
   .documents-btn {
