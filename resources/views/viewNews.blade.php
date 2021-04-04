@@ -92,7 +92,6 @@
                 <div class="topic-img-item">
                     <img src="{{ Voyager::image($news->image_main) }}" alt="">
                 </div>
-                
             </div>
             <div class="documents-in-block">
                 {!! $news->getTranslatedAttribute('body', \App::getLocale()) !!}

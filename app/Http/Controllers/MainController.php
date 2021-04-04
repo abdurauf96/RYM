@@ -75,7 +75,6 @@ class MainController extends Controller
 
     public function news()
     {
-        //$news=\App\Models\News::withTranslation(\App::getLocale())->paginate(1);
         return view('news');
     }
 
@@ -95,17 +94,32 @@ class MainController extends Controller
 
     public function viewPost($slug)
     {
-        return view('viewPost');
+        $post=\App\Models\Post::whereSlug($slug)->withTranslation(\App::getLocale())->first();
+        $post->view=$post->view+1;
+        $post->save();
+
+        $other_posts=\App\Models\Post::where('slug', '!=', $slug)
+        ->withTranslation(\App::getLocale())
+        ->get();
+        return view('viewPost', compact('post', 'other_posts'));
     }
 
     public function oav()
     {
-        return view('oav');
+        $oavs=\App\Models\Oav::withTranslation(\App::getLocale())->latest()->get();
+        return view('oav', compact('oavs'));
     }
 
-    public function viewOav()
+    public function viewOav($slug)
     {
-        return view('viewOav');
+        $oav=\App\Models\Oav::whereSlug($slug)->withTranslation(\App::getLocale())->first();
+        $oav->view=$oav->view+1;
+        $oav->save();
+
+        $other_oavs=\App\Models\Oav::where('slug', '!=', $slug)
+        ->withTranslation(\App::getLocale())
+        ->get();
+        return view('viewOav', compact('oav', 'other_oavs'));
     }
 
 

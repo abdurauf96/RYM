@@ -24,11 +24,11 @@ Route::get('/documents/{slug}', [MainController::class, 'viewDocument'])->name('
 Route::get('/news', [MainController::class, 'news'])->name('news'); //done++
 Route::get('/news/{slug}', [MainController::class, 'viewNews'])->name('viewNews'); //done++
 
-Route::get('/posts', [MainController::class, 'posts'])->name('posts');
-Route::get('/posts/{slug}', [MainController::class, 'viewPost'])->name('viewPost');
+Route::get('/posts', [MainController::class, 'posts'])->name('posts'); //done ++
+Route::get('/posts/{slug}', [MainController::class, 'viewPost'])->name('viewPost'); //done ++
 
-Route::get('/oav', [MainController::class, 'oav'])->name('oav');
-Route::get('/oav/{slug}', [MainController::class, 'viewOav'])->name('viewOav');
+Route::get('/oav', [MainController::class, 'oav'])->name('oav'); //done ++
+Route::get('/oav/{slug}', [MainController::class, 'viewOav'])->name('viewOav'); //done ++
 
 Route::get('/regions', [MainController::class, 'regions'])->name('regions');
 Route::get('/regions/{slug}', [MainController::class, 'viewRegion'])->name('viewRegion');
@@ -38,7 +38,7 @@ Route::get('/courses/{slug}', [MainController::class, 'viewCource'])->name('view
 
 Route::get('/event/{slug}', [MainController::class, 'viewEvent'])->name('viewEvent'); //done ++
 
-Route::get('/', [MainController::class, 'home'])->name('home');
+Route::get('/', [MainController::class, 'home'])->name('home'); //done++
 Route::get('/about', [MainController::class, 'about'])->name('about');
 Route::get('/leadership', [MainController::class, 'leadership'])->name('leadership');
 Route::get('/rules', [MainController::class, 'rules'])->name('rules');

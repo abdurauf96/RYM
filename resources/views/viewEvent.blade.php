@@ -88,6 +88,7 @@
         ==================================-->
     <div class="topic">
         <div class="rym-container">
+            @if ($post->images)
             <div class="topic-img-block">
                 @php $images=json_decode($event->images) @endphp
                 @foreach ($images as $image)
@@ -96,6 +97,7 @@
                 </div>
                 @endforeach
             </div>
+            @endif
             <div class="documents-in-block">
                 {!! $event->getTranslatedAttribute('body', \App::getLocale()) !!}
             </div>

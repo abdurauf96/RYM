@@ -3,7 +3,7 @@
 @section('breadcrumb')
 <div class="header-pages " style="background-image: url('/images/pages-bg.png');">
     <div class="rym-container">
-        <h1 class="header-pages-title">Learn how to increase business network in pandemic</h1>
+        <h1 class="header-pages-title">{{ $post->getTranslatedAttribute('title', \App::getLocale()) }}</h1>
     </div>
     <div class="topic-header-social">
         <div class="topic-header-social-left">
@@ -16,7 +16,7 @@
                         d="M15 18.75C17.0711 18.75 18.75 17.0711 18.75 15C18.75 12.9289 17.0711 11.25 15 11.25C12.9289 11.25 11.25 12.9289 11.25 15C11.25 17.0711 12.9289 18.75 15 18.75Z"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                223
+                {{ $post->view }}
             </div>
             <div class="topic-header-social-left-item">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +24,7 @@
                         d="M8.75 27.5H5C4.33696 27.5 3.70107 27.2366 3.23223 26.7678C2.76339 26.2989 2.5 25.663 2.5 25V16.25C2.5 15.587 2.76339 14.9511 3.23223 14.4822C3.70107 14.0134 4.33696 13.75 5 13.75H8.75M17.5 11.25V6.25C17.5 5.25544 17.1049 4.30161 16.4017 3.59835C15.6984 2.89509 14.7446 2.5 13.75 2.5L8.75 13.75V27.5H22.85C23.4529 27.5068 24.038 27.2955 24.4974 26.905C24.9568 26.5145 25.2596 25.9711 25.35 25.375L27.075 14.125C27.1294 13.7667 27.1052 13.4009 27.0042 13.0528C26.9031 12.7048 26.7276 12.3829 26.4898 12.1094C26.252 11.8359 25.9576 11.6174 25.627 11.469C25.2963 11.3206 24.9374 11.2459 24.575 11.25H17.5Z"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                120
+                120 
             </div>
         </div>
         <div class="topic-header-social-right">
@@ -88,74 +88,20 @@
         ==================================-->
     <div class="topic">
         <div class="rym-container">
+            @if ($post->images)
             <div class="topic-img-block">
+                @php $images=json_decode($post->images) @endphp
+                @foreach ($images as $image)
                 <div class="topic-img-item">
-                    <img src="/images/tek.png" alt="">
+                    <img src="{{ Voyager::image($image) }}" alt="">
                 </div>
-                <div class="topic-img-item">
-                    <img src="/images/tek.png" alt="">
-                </div>
+                @endforeach
             </div>
+            @endif
             <div class="documents-in-block">
-                <h5 class="documents-in-block-title">The standard Lorem Ipsum passage, used since the 1500s
-                </h5>
-                <div class="text mt-1">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                    doloremque laudantium, totam rem aperiam,
-                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                    Nemo enim ipsam
-                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-                    qui ratione
-                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                    consectetur, adipisci velit,
-                    sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                    voluptatem. Ut enim ad minima
-                    veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
-                    commodi consequatur? Quis
-                    autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
-                    vel illum qui dolorem
-                    eum fugiat quo voluptas nulla pariatur?</div>
+                {!! $post->getTranslatedAttribute('body', \App::getLocale()) !!}
             </div>
-            <div class="documents-in-block">
-                <h5 class="documents-in-block-title">The standard Lorem Ipsum passage, used since the 1500s
-                </h5>
-                <div class="text mt-1">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                    doloremque laudantium, totam rem aperiam,
-                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                    Nemo enim ipsam
-                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-                    qui ratione
-                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                    consectetur, adipisci velit,
-                    sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                    voluptatem. Ut enim ad minima
-                    veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
-                    commodi consequatur? Quis
-                    autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
-                    vel illum qui dolorem
-                    eum fugiat quo voluptas nulla pariatur?</div>
-            </div>
-            <div class="topic-center-img">
-                <img src="/images/narrow.png" alt="">
-            </div>
-            <div class="documents-in-block">
-                <h5 class="documents-in-block-title">The standard Lorem Ipsum passage, used since the 1500s
-                </h5>
-                <div class="text mt-1">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                    doloremque laudantium, totam rem aperiam,
-                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                    Nemo enim ipsam
-                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-                    qui ratione
-                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                    consectetur, adipisci velit,
-                    sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                    voluptatem. Ut enim ad minima
-                    veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
-                    commodi consequatur? Quis
-                    autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
-                    vel illum qui dolorem
-                    eum fugiat quo voluptas nulla pariatur?</div>
-            </div>
+           
             <div class="topic-like-btn-wrap">
                 <button class="topic-like-btn" type="button">
                     <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -170,56 +116,18 @@
         <div class="topic-slider-wrap" style="background-image: url(./images/topic-bg.png);">
             <div class="rym-container">
                 <div class="news-slider">
+                    @foreach ($other_posts as $other)
                     <div class="news-slider-item">
                         <div class="news-slider-img">
-                            <img src="/images/news.png" alt="">
+                            <img src="{{ Voyager::image($other->image_view) }}" alt="">
                         </div>
-                        <a href="#" class="news-slider-title">Elmna’s in Silicon Valley: Finance vs Family</a>
-                        <p class="topic-slider-date">By Admin, on Nov 23th, 2020 | 1 days ago</p>
-                        <div class="news-slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut ...</div>
-                        <a href="" class="news-slider-link">Read more</a>
+                        <a href="#" class="news-slider-title">{{ $other->getTranslatedAttribute('title', \App::getLocale()) }}</a>
+                        <p class="topic-slider-date"> {{ $other->created_at->format('d M, Y') }} </p>
+                        <div class="news-slider-text">{{ $other->getTranslatedAttribute('description', \App::getLocale()) }}</div>
+                        <a href="{{ route('viewPost', $other->slug ) }}" class="news-slider-link">Read more</a>
                     </div>
-                    <div class="news-slider-item">
-                        <div class="news-slider-img">
-                            <img src="/images/news.png" alt="">
-                        </div>
-                        <a href="#" class="news-slider-title">Elmna’s in Silicon Valley: Finance vs Family</a>
-                        <p class="topic-slider-date">By Admin, on Nov 23th, 2020 | 1 days ago</p>
-                        <div class="news-slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut ...</div>
-                        <a href="" class="news-slider-link">Read more</a>
-                    </div>
-                    <div class="news-slider-item">
-                        <div class="news-slider-img">
-                            <img src="/images/news.png" alt="">
-                        </div>
-                        <a href="#" class="news-slider-title">Elmna’s in Silicon Valley: Finance vs Family</a>
-                        <p class="topic-slider-date">By Admin, on Nov 23th, 2020 | 1 days ago</p>
-                        <div class="news-slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut ...</div>
-                        <a href="" class="news-slider-link">Read more</a>
-                    </div>
-                    <div class="news-slider-item">
-                        <div class="news-slider-img">
-                            <img src="/images/news.png" alt="">
-                        </div>
-                        <a href="#" class="news-slider-title">Elmna’s in Silicon Valley: Finance vs Family</a>
-                        <p class="topic-slider-date">By Admin, on Nov 23th, 2020 | 1 days ago</p>
-                        <div class="news-slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut ...</div>
-                        <a href="" class="news-slider-link">Read more</a>
-                    </div>
-                    <div class="news-slider-item">
-                        <div class="news-slider-img">
-                            <img src="/images/news.png" alt="">
-                        </div>
-                        <a href="#" class="news-slider-title">Elmna’s in Silicon Valley: Finance vs Family</a>
-                        <p class="topic-slider-date">By Admin, on Nov 23th, 2020 | 1 days ago</p>
-                        <div class="news-slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut ...</div>
-                        <a href="" class="news-slider-link">Read more</a>
-                    </div>
+                    @endforeach
+                    
                 </div>
             </div>
         </div>
