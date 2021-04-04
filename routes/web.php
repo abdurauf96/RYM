@@ -18,8 +18,8 @@ Route::get('/locale/{locale}', function ($locale) {
      return back();
 });
 
-Route::get('/documents', [MainController::class, 'documents'])->name('documents');
-Route::get('/documents/{slug}', [MainController::class, 'viewDocument'])->name('viewDocument');
+Route::get('/documents', [MainController::class, 'documents'])->name('documents'); //done ++
+Route::get('/documents/{slug}', [MainController::class, 'viewDocument'])->name('viewDocument'); //done ++
 
 Route::get('/news', [MainController::class, 'news'])->name('news'); //done++
 Route::get('/news/{slug}', [MainController::class, 'viewNews'])->name('viewNews'); //done++

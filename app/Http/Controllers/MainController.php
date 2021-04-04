@@ -43,7 +43,10 @@ class MainController extends Controller
 
     public function viewDocument($slug)
     {
-        return view('viewDocument');
+        $document=\App\Models\Document::whereSlug($slug)->withTranslation(\App::getLocale())->first();
+        $document->viewed=$document->viewed+1;
+        $document->save();
+        return view('viewDocument', compact('document'));
     }
     
     public function rules()
