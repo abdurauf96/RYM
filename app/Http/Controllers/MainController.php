@@ -128,9 +128,10 @@ class MainController extends Controller
         return view('regions');
     }
 
-    public function viewRegion($slug)
+    public function viewDistrict($slug)
     {
-        return view('viewRegion');
+        $district=\App\Models\District::whereSlug($slug)->withTranslation(\App::getLocale())->first();
+        return view('viewRegion', compact('district'));
     }
 
     public function faq()

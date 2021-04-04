@@ -30,8 +30,8 @@ Route::get('/posts/{slug}', [MainController::class, 'viewPost'])->name('viewPost
 Route::get('/oav', [MainController::class, 'oav'])->name('oav'); //done ++
 Route::get('/oav/{slug}', [MainController::class, 'viewOav'])->name('viewOav'); //done ++
 
-Route::get('/regions', [MainController::class, 'regions'])->name('regions');
-Route::get('/regions/{slug}', [MainController::class, 'viewRegion'])->name('viewRegion');
+Route::get('/regions', [MainController::class, 'regions'])->name('regions'); //done ++
+Route::get('/district/{slug}', [MainController::class, 'viewDistrict'])->name('viewDistrict'); //done ++
 
 Route::get('/courses', [MainController::class, 'cources'])->name('cources'); //done ++
 Route::get('/courses/{slug}', [MainController::class, 'viewCource'])->name('viewCource'); //done ++

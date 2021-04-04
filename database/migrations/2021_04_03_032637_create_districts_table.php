@@ -16,7 +16,16 @@ class CreateDistrictsTable extends Migration
         Schema::create('districts', function (Blueprint $table) {
             $table->id();
             $table->integer('region_id');
-            $table->string('name');
+            $table->string('name')->nullable();
+            $table->text('body')->nullable();
+            $table->string('addres')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('image_preview')->nullable();
+            $table->string('slug')->nullable();
+            $table->string('images')->nullable();
+            $table->string('seo_title')->nullable();
+            $table->text('seo_description')->nullable();
+            $table->text('seo_keywords')->nullable();
             $table->timestamps();
         });
     }

@@ -10,4 +10,9 @@ class Region extends Model
     use HasFactory;
     use Translatable;
     protected $translatable=['name'];
+
+    public function districts()
+    {
+        return $this->hasMany(District::class);
+    }
 }

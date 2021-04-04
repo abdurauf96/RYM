@@ -10,5 +10,10 @@ class District extends Model
 {
     use HasFactory;
     use Translatable;
-    protected $translatable=['name'];
+    protected $translatable=['name', 'body', 'addres', 'seo_title', 'seo_description', 'seo_keywords'];
+
+    public function region()
+    {
+        return $this->belongsTo(Region::class);
+    }
 }
