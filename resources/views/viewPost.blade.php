@@ -47,21 +47,21 @@
                 </svg>
             </div>
             <ul class="footer-social-links">
-                <li class="footer-social-links-item"><a href="" class="footer-social-links-link"><svg width="13"
+                <li class="footer-social-links-item"><a href="https://www.facebook.com/sharer/sharer.php?u=http://rym.uz/posts/{{ $post->slug  }}" class="footer-social-links-link"><svg width="13"
                             height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M11.291 13.4242L11.9175 9.41527H7.99995V6.81374C7.99995 5.71697 8.5472 4.64789 10.3018 4.64789H12.0828V1.23471C12.0828 1.23471 10.4666 0.963867 8.92129 0.963867C5.69505 0.963867 3.58623 2.88397 3.58623 6.35989V9.41527H0V13.4242H3.58623V23.1156H7.99995V13.4242H11.291Z"
                                 fill="#118844" />
                         </svg>
                     </a></li>
-                <li class="footer-social-links-item"><a href="" class="footer-social-links-link"><svg width="23"
+                <li class="footer-social-links-item"><a href="https://twitter.com/intent/tweet?text={{ $post->getTranslatedAttribute('title', \App::getLocale()) }}&amp;url=http://rym.uz/posts/" class="footer-social-links-link"><svg width="23"
                             height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M19.8747 5.85521C19.8887 6.06987 19.8887 6.28458 19.8887 6.49923C19.8887 13.0466 15.3207 20.5907 6.97161 20.5907C4.39941 20.5907 2.00997 19.7779 0 18.3673C0.36546 18.4133 0.716816 18.4286 1.09634 18.4286C3.21871 18.4286 5.17247 17.6467 6.73265 16.3127C4.73675 16.2666 3.06412 14.8406 2.48783 12.8779C2.76897 12.9239 3.05006 12.9546 3.34526 12.9546C3.75286 12.9546 4.1605 12.8932 4.53998 12.7859C2.45975 12.3259 0.899524 10.3326 0.899524 7.92524V7.86392C1.50389 8.23193 2.20674 8.46193 2.95163 8.49256C1.72879 7.6032 0.927647 6.08521 0.927647 4.36785C0.927647 3.44787 1.1525 2.60453 1.54608 1.86852C3.78094 4.87387 7.14025 6.83651 10.9071 7.05122C10.8369 6.68321 10.7947 6.29992 10.7947 5.91657C10.7947 3.18719 12.8187 0.963867 15.3347 0.963867C16.6418 0.963867 17.8225 1.56187 18.6518 2.52788C19.6778 2.31322 20.6617 1.8992 21.5332 1.33187C21.1958 2.48191 20.479 3.44791 19.5373 4.06121C20.4509 3.95393 21.3364 3.67786 22.1516 3.29456C21.5333 4.27586 20.7602 5.14984 19.8747 5.85521Z"
                                 fill="#009746" />
                         </svg>
                     </a></li>
-                <li class="footer-social-links-item"><a href="" class="footer-social-links-link"><svg
+                <li class="footer-social-links-item"><a href="https://telegram.me/share/url?url={{ \Request::url() }}}}" class="footer-social-links-link"><svg
                             width="23px" height="23px" viewBox="0 -31 512 512"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill="#009746" d="m123.195312 260.738281 63.679688 159.1875
