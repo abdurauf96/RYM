@@ -161,9 +161,36 @@ class MainController extends Controller
         return view('viewCource', compact('course'));
     }
 
-    public function search()
+    public function search(Request $request)
     {
-        return view('search');
+        $query=$request->q;
+        
+        $courses=\App\Models\Course::where('title', 'like', '%'.$query.'%')
+        ->orWhere('description', 'like', '%'.$query.'%')
+        ->orWhere('body', 'like', '%'.$query.'%')
+        ->get();
+
+        $events=\App\Models\Event::where('title', 'like', '%'.$query.'%')
+        ->orWhere('description', 'like', '%'.$query.'%')
+        ->orWhere('body', 'like', '%'.$query.'%')
+        ->get();
+
+        $posts=\App\Models\Post::where('title', 'like', '%'.$query.'%')
+        ->orWhere('description', 'like', '%'.$query.'%')
+        ->orWhere('body', 'like', '%'.$query.'%')
+        ->get();
+
+        $oavs=\App\Models\Oav::where('title', 'like', '%'.$query.'%')
+        ->orWhere('description', 'like', '%'.$query.'%')
+        ->orWhere('body', 'like', '%'.$query.'%')
+        ->get();
+
+        $news=\App\Models\News::where('title', 'like', '%'.$query.'%')
+        ->orWhere('description', 'like', '%'.$query.'%')
+        ->orWhere('body', 'like', '%'.$query.'%')
+        ->get();
+
+        return view('search', compact('query', 'courses', 'news', 'posts', 'events', 'oavs'));
     }
 
     public function gallery()
@@ -176,6 +203,7 @@ class MainController extends Controller
         $videos=\App\Models\Video::withTranslation(\App::getLocale())->get();
         return view('videos', compact('videos'));
     }
+
     public function signIn(Request $request)
     {
         $name=$request->name;

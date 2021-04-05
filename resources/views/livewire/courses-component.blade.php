@@ -56,7 +56,7 @@
                         </a>
                     </div>
                     <div class="togarak-links d-f flex-column">
-                        <a class="cources-slider-link-member togarak-link togarakModal">A’zo bo’lish</a>
+                        <a class="cources-slider-link-member togarak-link togarakModal" data-course="{{ $course->getTranslatedAttribute('title', \App::getLocale()) }}">A’zo bo’lish</a>
                         <a href="{{ route('viewCource', $course->slug) }}" class="cources-slider-link-member togarak-link mt-l">Batafsil</a>
                     </div>
                 </div>

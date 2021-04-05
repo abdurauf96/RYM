@@ -43,6 +43,7 @@ $(document).ready(function () {
         var email =$('.email').val();
         var body =$('.body').val();
         var course =$('.hidden_course').val();
+        console.log(name, phone, email);
         $.ajax({
             url: "/sign-in",
             type: 'POST',
@@ -62,6 +63,11 @@ $(document).ready(function () {
         })
     });
     
+    window.addEventListener('messageSent', event => {
+        $('.togarak-success').fadeIn();
+        
+    });
+
     function closeCommentttModal(e) {
         var target = $(e.target);
         if (target.is('.togarak-success')) {

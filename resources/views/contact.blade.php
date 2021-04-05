@@ -13,34 +13,7 @@
         <div class="contact">
             <div class="contact-form-wrap">
                 <h1 class="contact-title">Aloqa</h1>
-                <form action="" class="contact-form">
-                    <div class="contact-form-group">
-                        <label for="name">Ism Familiya</label>
-                        <input type="text" id="email" class="contact-form-input" placeholder="Jimmy Newtron">
-                    </div>
-                    <div class="contact-form-group contact-email-mob">
-                        <label for="email">E-pochta</label>
-                        <input type="text" id="email" class="contact-form-input" placeholder="jimmynewtron@mail.com">
-                    </div>
-                    <div class="contact-form-group form-num">
-                        <label for="phone">Telefon raqam</label>
-                        <input type="text" id="phone" class="contact-form-input" placeholder="+12 3456 789">
-                    </div>
-                    <div class="contact-form-textarea-wrap">
-                        <label for="text">Xabar matni</label>
-                        <textarea name="" id="text" class="contact-form-textarea"
-                            placeholder="Dear Sir/Madam"></textarea>
-                    </div>
-                    <div class="contact-form-bottom">
-                        <div class="contact-form-checkbox">
-                            <input type="checkbox" id="lesson1" />
-                            <label for="lesson1" class="contact-form-label">Accept terms & conditions</label>
-                        </div>
-                        <!-- <div> -->
-                        <button type="button" class="contact-send-btn">Send</button>
-                        <!-- </div> -->
-                    </div>
-                </form>
+                @livewire('contact-form')
             </div>
 
             <div class="contact-map-block">
@@ -91,6 +64,16 @@
             </div>
         </div>
     </div>
+
+    <div class="togarak-success">
+        <div class="togarak-success-block">
+            <!-- <div class="togarak-success-title">Ariza yuborildi!</div> -->
+            <div class="togarak-success-img">
+                <img src="/images/success.png" alt="">
+            </div>
+            <button type="button" class="togarak-success-btn">Yopish</button>
+        </div>
+    </div>
 @endsection
 
 @section('js')
@@ -105,6 +88,8 @@
         // The marker, positioned at Uluru
         var marker = new google.maps.Marker({ position: uluru, map: map });
     }
+
+
 </script>
 <script async="" defer=""
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlFroO7C1GYV5PKyg1IOXVvBp42eAZrBU&amp;callback=initMap">

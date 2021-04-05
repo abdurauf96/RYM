@@ -103,7 +103,11 @@
                             {{ menu('main', 'layouts.menu') }}
                         </ul>
                         <div class="header-nav-search-wrap">
-                            <input type="text" class="header-nav-search" placeholder="Search...">
+                            <form action="/search" method="GET">
+                                @csrf
+                                <input type="text" class="header-nav-search" name="q" placeholder="Search...">
+                            </form>
+                            
                         </div>
 
                         <div class="mobile-gamburger">
