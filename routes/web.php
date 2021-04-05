@@ -40,8 +40,8 @@ Route::get('/event/{slug}', [MainController::class, 'viewEvent'])->name('viewEve
 
 Route::get('/', [MainController::class, 'home'])->name('home'); //done++
 Route::get('/about', [MainController::class, 'about'])->name('about'); //done ++
-Route::get('/leadership', [MainController::class, 'leadership'])->name('leadership');
-Route::get('/rules', [MainController::class, 'rules'])->name('rules');
+Route::get('/leadership', [MainController::class, 'leadership'])->name('leadership'); //done ++
+Route::get('/rules', [MainController::class, 'rules'])->name('rules'); //done ++
 Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 Route::get('/search', [MainController::class, 'search'])->name('search');
 Route::get('/faq', [MainController::class, 'faq'])->name('faq');

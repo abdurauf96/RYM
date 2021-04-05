@@ -38,7 +38,8 @@ class MainController extends Controller
 
     public function leadership()
     {
-        return view('leadership');
+        $leaders=\App\Models\Leader::withTranslation(\App::getLocale())->get();
+        return view('leadership', compact('leaders'));
     }
 
     public function documents()
@@ -56,7 +57,8 @@ class MainController extends Controller
     
     public function rules()
     {
-        return view('rules');
+        $rules=\App\Models\Rule::withTranslation(\App::getLocale())->get();
+        return view('rules', compact('rules'));
     }
 
     public function structure()
