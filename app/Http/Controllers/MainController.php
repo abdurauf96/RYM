@@ -146,7 +146,8 @@ class MainController extends Controller
 
     public function faq()
     {
-        return view('faq');
+        $faqs=\App\Models\Faq::withTranslation(\App::getLocale())->get();
+        return view('faq',compact('faqs'));
     }
 
     public function cources()
@@ -172,6 +173,7 @@ class MainController extends Controller
 
     public function videos()
     {
-        return view('videos');
+        $videos=\App\Models\Video::withTranslation(\App::getLocale())->get();
+        return view('videos', compact('videos'));
     }
 }

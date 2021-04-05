@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/bootstrap-scss/bootstrap-grid.min.css">
     <link rel="stylesheet" href="/libs/slick/slick.css">
+    
     <link rel="stylesheet" href="/css/style.min.css">
     <link rel="stylesheet" href="/css/media.min.css">
     <link rel="stylesheet" href="/css/menu.css">
@@ -89,7 +90,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header-nav">
+            <div class="header-nav @yield('extra_class')">
                 <div class="rym-container">
                     <div class="header-nav-block d-f align-items-center">
                         <ul class="header-nav-menu d-f align-items-center flex-fill">

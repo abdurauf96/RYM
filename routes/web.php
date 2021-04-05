@@ -44,9 +44,9 @@ Route::get('/leadership', [MainController::class, 'leadership'])->name('leadersh
 Route::get('/rules', [MainController::class, 'rules'])->name('rules'); //done ++
 Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 Route::get('/search', [MainController::class, 'search'])->name('search');
-Route::get('/faq', [MainController::class, 'faq'])->name('faq');
-Route::get('/gallery', [MainController::class, 'gallery'])->name('gallery');
-Route::get('/videos', [MainController::class, 'videos'])->name('videos');
+Route::get('/faq', [MainController::class, 'faq'])->name('faq'); //done ++
+Route::get('/gallery', [MainController::class, 'gallery'])->name('gallery'); //done +++
+Route::get('/videos', [MainController::class, 'videos'])->name('videos'); //done ++
 Route::get('/structure', [MainController::class, 'structure'])->name('structure');
 
 

@@ -1,6 +1,8 @@
 @extends('layouts.index')
 
-
+@section('extra_class')
+    error-nav
+@endsection
 @section('content')
 <div class="error">
     <div class="rym-container">
