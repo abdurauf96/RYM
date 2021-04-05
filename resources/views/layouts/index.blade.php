@@ -17,6 +17,7 @@
     <title>RYM</title>
     @yield('styles')
     @livewireStyles
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
 <body>

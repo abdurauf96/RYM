@@ -24,6 +24,9 @@ $(document).ready(function () {
 
     $('.togarakModal').click(function () {
         $('.togarak-modal').fadeIn();
+        var course=$(this).data('course');
+        $('.hidden_course').val(course);
+       
     });
     function closeCommenttModal(e) {
         var target = $(e.target);
@@ -35,8 +38,30 @@ $(document).ready(function () {
 
 
     $('.togarak-modal-btn').click(function () {
-        $('.togarak-success').fadeIn();
+        var name =$('.name').val();
+        var phone =$('.phone').val();
+        var email =$('.email').val();
+        var body =$('.body').val();
+        var course =$('.hidden_course').val();
+        $.ajax({
+            url: "/sign-in",
+            type: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: {
+                name: name,
+                phone: phone,
+                email: email,
+                body: body,
+                course: course,
+            },
+        })
+        .done(function(data){
+            $('.togarak-success').fadeIn();
+        })
     });
+    
     function closeCommentttModal(e) {
         var target = $(e.target);
         if (target.is('.togarak-success')) {

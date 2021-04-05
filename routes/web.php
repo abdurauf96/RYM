@@ -49,6 +49,7 @@ Route::get('/gallery', [MainController::class, 'gallery'])->name('gallery'); //d
 Route::get('/videos', [MainController::class, 'videos'])->name('videos'); //done ++
 Route::get('/structure', [MainController::class, 'structure'])->name('structure');
 
+Route::post('/sign-in', [MainController::class, 'signIn']); //done ++
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

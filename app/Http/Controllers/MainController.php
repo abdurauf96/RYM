@@ -176,4 +176,30 @@ class MainController extends Controller
         $videos=\App\Models\Video::withTranslation(\App::getLocale())->get();
         return view('videos', compact('videos'));
     }
+    public function signIn(Request $request)
+    {
+        $name=$request->name;
+        $phone=$request->phone;
+        $email=$request->email;
+        $body=$request->body;
+        $course=$request->course;
+
+        $message=<<<TEXT
+        Murojat qoldirildi!
+
+        Murojat turi: Kursga a'zo bo'lish
+        Kurs nomi: {$course}
+        Telefon: {$phone}
+        Ismi: {$name}
+        Pochta manzili: {$email}
+        Qiziqishlari: {$body}
+TEXT;
+        
+        $apiToken = "768420781:AAEzzh0nDnr3o067TNOBnafxm1QTe4fbilo";
+        $data = [
+            'chat_id' => '-1001194799621',
+            'text' => $message
+        ];
+        $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
+    }
 }

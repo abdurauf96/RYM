@@ -15,6 +15,38 @@ class CoursesBlockComponent extends Component
     public $limit;
     public $region_id;
     public $district_id;
+    // public $course_name;
+    // public $name;
+    // public $phone;
+    // public $email;
+    // public $body;
+    
+    public function sendMessage()
+    {
+        
+        $message=<<<TEXT
+        Murojat qoldirildi!
+
+        Murojat turi: Kursga a'zo bo'lish
+        Kurs nomi: {$this->course_name}
+        Telefon: {$this->phone}
+        Ismi: {$this->name}
+        Pochta manzili: {$this->email}
+        Qiziqishlari: {$this->body}
+TEXT;
+        
+        $apiToken = "768420781:AAEzzh0nDnr3o067TNOBnafxm1QTe4fbilo";
+        $data = [
+            'chat_id' => '-1001194799621',
+            'text' => $message
+        ];
+        $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
+
+        $this->name='';
+        $this->phone='';
+        $this->email='';
+        $this->body='';
+    }
 
     public function mount()
     {
@@ -23,6 +55,11 @@ class CoursesBlockComponent extends Component
         $this->regions=Region::all();
         $this->districts=District::all();
         
+    }
+
+    public function getCourse($title)
+    {
+        $this->course_name=$title;
     }
 
     public function sortByRegion($region_id)
@@ -59,6 +96,7 @@ class CoursesBlockComponent extends Component
         ->limit($this->limit)
         ->get();
     }
+
 
     public function render()
     {
