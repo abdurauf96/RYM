@@ -11,4 +11,9 @@ class Oav extends Model
     use HasFactory;
     use Translatable;
     protected $translatable=['title', 'description', 'body', 'seo_title', 'seo_description', 'seo_keywords'];
+    
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
 }

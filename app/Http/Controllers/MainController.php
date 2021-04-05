@@ -230,4 +230,21 @@ TEXT;
         ];
         $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
     }
+
+    public function like(Request $request)
+    {
+        $user_ip=$request->user_ip;
+        $type=$request->type;
+        $id=$request->id;
+        $like=\App\Models\Like::where('user_ip', $user_ip)->where($type, $id)->first();
+        if(!$like){
+            $like=new \App\Models\Like();
+            $like->user_ip=$user_ip;
+            $like->$type=$id;
+            $like->save();
+           return true;
+        }else{
+            return false;
+        }
+    }
 }

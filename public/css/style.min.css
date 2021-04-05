@@ -21,6 +21,10 @@
 .btn_disabled{
   background-color: #00974678 !important;
 }
+.active_like_btn{
+  background-color: #009746 !important;
+}
+
 hr {
   margin: 30px 0;
   height: 2px;

@@ -68,6 +68,32 @@ $(document).ready(function () {
         
     });
 
+    $('.topic-like-btn').click(function(){
+        var _this=$(this);
+        $.getJSON("https://api.ipify.org?format=json", function(data) {
+            var user_ip=data.ip;
+            var type=_this.data('type');
+            var id=_this.data('id');
+            $.ajax({
+                url: "/like",
+                type: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: {
+                    user_ip: user_ip,
+                    type: type,
+                    id: id,
+                },
+            })
+            .done(function(data){
+                console.log(data) ;
+            })
+            
+        })
+        
+    })
+
     function closeCommentttModal(e) {
         var target = $(e.target);
         if (target.is('.togarak-success')) {

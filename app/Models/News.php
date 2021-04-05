@@ -17,4 +17,9 @@ class News extends Model
     {
         return $this->belongsTo(NewsCategory::class, 'category_id');
     }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
 }

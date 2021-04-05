@@ -50,6 +50,8 @@ Route::get('/videos', [MainController::class, 'videos'])->name('videos'); //done
 Route::get('/structure', [MainController::class, 'structure'])->name('structure');
 
 Route::post('/sign-in', [MainController::class, 'signIn']); //done ++
+Route::post('/like', [MainController::class, 'like']); //done ++
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
