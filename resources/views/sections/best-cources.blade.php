@@ -39,7 +39,7 @@
                     </div>
                     <div class="cources-slider-link mt-1">
                         <a href="{{ route('viewCource', $course->slug) }}" class="cources-slider-link-data">Batafsil</a>
-                        <a href="" class="cources-slider-link-member">A’zo bo’lish</a>
+                        <a href="#" class="cources-slider-link-member togarakModal" data-course="{{ $course->getTranslatedAttribute('title', \App::getLocale()) }}">A’zo bo’lish</a>
                     </div>
                 </div>
             </div>

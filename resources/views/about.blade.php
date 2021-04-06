@@ -53,12 +53,8 @@
         <div class="rym-container">
             <div class="why-we-wrap">
                 <div class="why-we-comment">
-                    <div class="title">Nega aynan biz?</div>
-                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis
-                        aute irure dolor in reprehen</div>
+                    <div class="title">{{$about->getTranslatedAttribute('feature_block_title', \App::getLocale())}}</div>
+                    <div class="text">{{$about->getTranslatedAttribute('feature_block_body', \App::getLocale())}}</div>
                 </div>
                 <div class="why-we-block">
                     @foreach ($features as $feature)

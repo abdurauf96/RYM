@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -31,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('layouts.index', function($view){
             $link=\App\Models\Link::withTranslation(\App::getLocale())->first();
             $footer_menus=\App\Models\FooterMenu::withTranslation(\App::getLocale())->orderBy('order')->get();
+            
             $view->with(compact('link','footer_menus'));
         });
     }

@@ -12,7 +12,7 @@
     <div class="rym-container">
         <div class="contact">
             <div class="contact-form-wrap">
-                <h1 class="contact-title">Aloqa</h1>
+                <h1 class="contact-title">{{ $contact->getTranslatedAttribute('title', \App::getLocale()) }}</h1>
                 @livewire('contact-form')
             </div>
 

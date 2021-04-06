@@ -2,7 +2,7 @@
 
 @section('breadcrumb')
 <div class="header-pages" style="background-image: url('./images/pages-bg.png');">
-    <h1 class="header-pages-title">OAV biz haqimizda</h1>
+    <h1 class="header-pages-title">{{ $oavPage->getTranslatedAttribute('title', \App::getLocale()) }}</h1>
 </div>
 @endsection
 

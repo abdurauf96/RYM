@@ -22,6 +22,8 @@ class CreateAboutPagesTable extends Migration
             $table->text('opinion_block_body')->nullable();
             $table->string('opinion_block_author')->nullable();
             $table->string('opinion_author_image')->nullable();
+            $table->string('feature_block_title')->nullable();
+            $table->text('feature_block_body')->nullable();
             $table->string('team_block_title')->nullable();
             $table->text('team_block_description')->nullable();
             $table->string('seo_title')->nullable();
