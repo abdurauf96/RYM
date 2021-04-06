@@ -74,6 +74,9 @@ $(document).ready(function () {
             var user_ip=data.ip;
             var type=_this.data('type');
             var id=_this.data('id');
+            
+            var nums=parseInt($('.likes_'+type).html());
+            
             $.ajax({
                 url: "/like",
                 type: 'POST',
@@ -88,6 +91,11 @@ $(document).ready(function () {
             })
             .done(function(data){
                 console.log(data) ;
+                if(data){
+                    $('.likes_'+type).html(nums+1);
+                }else{
+                    alert("siz like bosgansiz")
+                }
             })
             
         })
