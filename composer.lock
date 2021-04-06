@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "51e699c1579a833ce383b66d18a7ecc1",
+    "content-hash": "51e13ed3fb6d05bd2aa09c61501a2155",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -5958,6 +5958,71 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2020-07-13T06:12:54+00:00"
+        },
+        {
+            "name": "torann/laravel-meta-tags",
+            "version": "3.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Torann/laravel-meta-tags.git",
+                "reference": "bd6ad602c3ea05f427e5f62ea65649a6ae0be6c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Torann/laravel-meta-tags/zipball/bd6ad602c3ea05f427e5f62ea65649a6ae0be6c9",
+                "reference": "bd6ad602c3ea05f427e5f62ea65649a6ae0be6c9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": ">=5.1",
+                "illuminate/support": ">=5.1",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpstan/phpstan": "^0.12.14",
+                "phpunit/phpunit": "~5.0",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Torann\\LaravelMetaTags\\MetaTagsServiceProvider"
+                    ],
+                    "aliases": {
+                        "MetaTag": "Torann\\LaravelMetaTags\\Facades\\MetaTag"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Torann\\LaravelMetaTags\\": "src/Torann/LaravelMetaTags/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lito",
+                    "email": "lito@eordes.com"
+                },
+                {
+                    "name": "Daniel Stainback",
+                    "email": "daniel@lyften.com"
+                }
+            ],
+            "description": "A package to manage Header Meta Tags",
+            "keywords": [
+                "head",
+                "laravel",
+                "meta",
+                "meta tags",
+                "tags"
+            ],
+            "time": "2021-02-23T14:38:25+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

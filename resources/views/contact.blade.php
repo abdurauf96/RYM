@@ -32,8 +32,7 @@
                                     fill="white" />
                             </svg>
                         </div>
-                        <div class="contact-map-info-social-name">832 Thompson Drive, San Fransisco
-                            CA 94107, United States</div>
+                        <div class="contact-map-info-social-name">{{  $link->getTranslatedAttribute('addres', \App::getLocale())}}</div>
                     </div>
                     <a href="tel:+123345123556" class="contact-map-info-social">
                         <div class="contact-map-info-social-icon">
@@ -44,7 +43,7 @@
                                     fill="white" />
                             </svg>
                         </div>
-                        <div class="contact-map-info-social-name">+123 345123 556</div>
+                        <div class="contact-map-info-social-name">{{ $link->phone_footer }}</div>
                     </a>
                     <a href="#" class="contact-map-info-social">
                         <div class="contact-map-info-social-icon">
@@ -58,7 +57,7 @@
                                     fill="white" />
                             </svg>
                         </div>
-                        <div class="contact-map-info-social-name">support@elmna.com</div>
+                        <div class="contact-map-info-social-name">{{ $link->email }}</div>
                     </a>
                 </div>
             </div>

@@ -175,6 +175,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Jorenvh\Share\Providers\ShareServiceProvider::class,
+        Torann\LaravelMetaTags\MetaTagsServiceProvider::class,
+
 
     ],
 
@@ -229,6 +231,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Share' => Jorenvh\Share\ShareFacade::class,
+        'MetaTag'   => Torann\LaravelMetaTags\Facades\MetaTag::class,
 
     ],
 

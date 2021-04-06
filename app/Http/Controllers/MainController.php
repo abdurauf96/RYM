@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use MetaTag;
 
 class MainController extends Controller
 {
@@ -68,7 +69,8 @@ class MainController extends Controller
 
     public function contact()
     {
-        return view('contact');
+        $link=\App\Models\Link::withTranslation(\App::getLocale())->first();
+        return view('contact', compact('link'));
     }
 
     public function viewEvent($slug)

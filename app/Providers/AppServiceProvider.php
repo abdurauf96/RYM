@@ -30,7 +30,8 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('layouts.index', function($view){
             $link=\App\Models\Link::withTranslation(\App::getLocale())->first();
-            $view->with(compact('link'));
+            $footer_menus=\App\Models\FooterMenu::withTranslation(\App::getLocale())->orderBy('order')->get();
+            $view->with(compact('link','footer_menus'));
         });
     }
 }

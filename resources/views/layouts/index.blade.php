@@ -14,7 +14,13 @@
     <link rel="stylesheet" href="/css/menu.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
         rel="stylesheet">
-    <title>RYM</title>
+    
+    <title>{{ MetaTag::get('title') }}</title>
+
+        {!! MetaTag::tag('description') !!}
+        {!! MetaTag::tag('keywords') !!}
+        
+        {!! MetaTag::openGraph() !!}
     @yield('styles')
     @livewireStyles
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -218,19 +224,14 @@
             <div class="footer-menu-block d-f justify-content-between">
                 <ul class="footer-menu">
                     <h6 class="footer-menu-title">Markaz</h6>
-                    <li class="footer-menu-item"><a href="" class="footer-menu-link">Rahbariyat</a></li>
-                    <li class="footer-menu-item"><a href="" class="footer-menu-link">Maqsad va vazifalar</a></li>
-                    <li class="footer-menu-item"><a href="" class="footer-menu-link">Rahbariyat</a></li>
-                    <li class="footer-menu-item"><a href="" class="footer-menu-link">Maqsad va vazifalar</a></li>
-                    <li class="footer-menu-item"><a href="" class="footer-menu-link">Rahbariyat</a></li>
-                </ul>
-                <ul class="footer-menu">
-                    <h6 class="footer-menu-title">Faoliyat</h6>
-                    <li class="footer-menu-item"><a href="" class="footer-menu-link">Rahbariyat</a></li>
-                    <li class="footer-menu-item"><a href="" class="footer-menu-link">Maqsad va vazifalar</a></li>
-                    <li class="footer-menu-item"><a href="" class="footer-menu-link">Rahbariyat</a></li>
-                    <li class="footer-menu-item"><a href="" class="footer-menu-link">Maqsad va vazifalar</a></li>
-                    <li class="footer-menu-item"><a href="" class="footer-menu-link">Rahbariyat</a></li>
+                    @foreach ($footer_menus as $menu)
+                    <li class="footer-menu-item"><a href="{{ $menu->link }}" class="footer-menu-link">{{ $menu->getTranslatedAttribute('title', \App::getLocale()) }}</a></li>
+                    @if($loop->iteration==5)
+                    </ul>
+                    <ul class="footer-menu">
+                    @endif
+                    @endforeach
+                    
                 </ul>
             </div>
             <div class="footer-info">
