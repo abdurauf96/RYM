@@ -94,6 +94,26 @@ $(document).ready(function () {
         
     })
 
+    $('.events-email-btn').click(function(){
+        var email=$('.events-email-input').val();
+        if(email!=''){
+            $.ajax({
+                url: "/subscribe",
+                type: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: {
+                    email: email,
+                },
+            })
+            .done(function(data){
+                $('.togarak-success').fadeIn();
+                $('.events-email-input').val('');
+            })
+        }
+    })
+
     function closeCommentttModal(e) {
         var target = $(e.target);
         if (target.is('.togarak-success')) {

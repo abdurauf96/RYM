@@ -342,4 +342,23 @@ TEXT;
             return false;
         }
     }
+
+    public function subscribe(Request $request)
+    {
+        
+        $email=$request->email;
+        $message=<<<TEXT
+        Murojat qoldirildi!
+
+        Murojat turi: Haftalik yangilanishlarga a'zo bo'lish uchun
+        Pochta manzili: {$email}
+TEXT;
+        
+        $apiToken = "768420781:AAEzzh0nDnr3o067TNOBnafxm1QTe4fbilo";
+        $data = [
+            'chat_id' => '-1001194799621',
+            'text' => $message
+        ];
+        $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
+    }
 }

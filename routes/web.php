@@ -51,6 +51,7 @@ Route::get('/structure', [MainController::class, 'structure'])->name('structure'
 
 Route::post('/sign-in', [MainController::class, 'signIn']); //done ++
 Route::post('/like', [MainController::class, 'like']); //done ++
+Route::post('/subscribe', [MainController::class, 'subscribe']); //done ++
 
 
 Route::group(['prefix' => 'admin'], function () {
