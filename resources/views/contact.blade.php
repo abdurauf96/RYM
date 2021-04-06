@@ -19,7 +19,7 @@
             <div class="contact-map-block">
                 <div class="contact-map" id="map"></div>
                 <div class="contact-map-info">
-                    <div class="contact-map-info-title">Bizning Manzil</div>
+                    <div class="contact-map-info-title">@lang('messages.addres')</div>
                     <div class="contact-map-info-social">
                         <div class="contact-map-info-social-icon">
                             <svg width="34" height="33" viewBox="0 0 34 33" fill="none"
@@ -70,7 +70,7 @@
             <div class="togarak-success-img">
                 <img src="/images/success.png" alt="">
             </div>
-            <button type="button" class="togarak-success-btn">Yopish</button>
+            <button type="button" class="togarak-success-btn">@lang('messages.close')</button>
         </div>
     </div>
 @endsection

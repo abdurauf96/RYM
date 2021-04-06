@@ -31,10 +31,10 @@
                             </svg>
                             <p class="rahbariyat-info-email-title">{{ $lead->email }}</p>
                         </div>
-                        <div class="rahbariyat-info-text">Tel.: {{ $lead->phone }}</div>
+                        <div class="rahbariyat-info-text">@lang('messages.phone').: {{ $lead->phone }}</div>
                         <div class="rahabriyat-time-block align-items-center d-f justify-content-between">
                             <div class="rahbariyat-info-text">{{ $lead->getTranslatedAttribute('work_time', \App::getLocale()) }}</div>
-                            <button type="button" class="rahbariyat-info-btn">Tarjima hol</button>
+                            <button type="button" class="rahbariyat-info-btn">@lang('messages.hol')</button>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                         {!! $lead->getTranslatedAttribute('body', \App::getLocale()) !!}
                     </div>
                     <div class="d-f justify-content-end">
-                        <div class="rahbariyat-report-btn">Orqaga</div>
+                        <div class="rahbariyat-report-btn">@lang('messages.back')</div>
                     </div>
                 </div>
             </div> 

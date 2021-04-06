@@ -187,7 +187,7 @@
                 <div class="footer-social-logo">
                     <img src="{{ Voyager::image($link->logo_footer) }}" alt="">
                 </div>
-                <p class="footer-social-links-title">Ijtimoiy tarmoqlardagi manzillarimiz</p>
+                <p class="footer-social-links-title">@lang('messages.social')</p>
                 <ul class="footer-social-links">
                     <li class="footer-social-links-item"><a href="{{ $link->facebook }}" class="footer-social-links-link"><svg width="13"
                                 height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -223,7 +223,7 @@
             </div>
             <div class="footer-menu-block d-f justify-content-between">
                 <ul class="footer-menu">
-                    <h6 class="footer-menu-title">Markaz</h6>
+                    <h6 class="footer-menu-title">@lang('messages.center')</h6>
                     @foreach ($footer_menus as $menu)
                     <li class="footer-menu-item"><a href="{{ $menu->link }}" class="footer-menu-link">{{ $menu->getTranslatedAttribute('title', \App::getLocale()) }}</a></li>
                     @if($loop->iteration==5)

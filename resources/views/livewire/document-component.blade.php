@@ -57,14 +57,14 @@
                 </div>
             </div>
         </div>
-        <a href="{{ route('viewDocument', $doc->slug) }}" class="documents-read">O’qish</a>
+        <a href="{{ route('viewDocument', $doc->slug) }}" class="documents-read">@lang('messages.read')</a>
         
         @if($doc->file!='[]')
             @php
                 $file=json_decode($doc->file)[0];
             @endphp
         <a class="documents-btn" href="{{ Voyager::image($file->download_link) }}" wire:click="download({{ $doc->id }})">
-            Yuklab olish
+            @lang('messages.download')
         </a>
        
         @endif

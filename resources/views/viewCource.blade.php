@@ -13,7 +13,7 @@
             <div class="togarak-page">
                 <div class="togarak-page-top">
                     <div class="togarak-page-top-info">
-                        <h5 class="togarak-page-top-title">To’garak tashkil etildi</h5>
+                        <h5 class="togarak-page-top-title">@lang('messages.course_created')</h5>
                         <div class="togarak-page-top-date">{{ $course->created_date->format('d.m.Y') }}</div>
                         <div class="togarak-page-top-loc">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +34,7 @@
                             {{ $course->region->getTranslatedAttribute('name', \App::getLocale()) }}
                         </div>
                     </div>
-                    <button class="togarak-page-top-btn togarakModal">Ariza yuborish</button>
+                    <button class="togarak-page-top-btn togarakModal" data-course="{{ $course->getTranslatedAttribute('title', \App::getLocale()) }}">@lang('messages.submit')</button>
                 </div>
                 <div class="togarak-page-phrase">
                     {!! $course->getTranslatedAttribute('advantages', \App::getLocale()) !!}
@@ -54,7 +54,7 @@
                     {!! $course->getTranslatedAttribute('body', \App::getLocale()) !!}
                 </div>
                 <div class="togarak-page-master">
-                    <h4 class="togarak-page-master-title">Master-klass o`tkazuvchi
+                    <h4 class="togarak-page-master-title">@lang('messages.master')
                     </h4>
                     <div class="togarak-page-master-block">
                         <div class="togarak-page-master-img">

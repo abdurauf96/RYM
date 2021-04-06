@@ -11,10 +11,10 @@
                 <div class="error-item-img">
                     <img src="/images/404.png" alt="">
                 </div>
-                <div class="error-item-title">Kechirasiz, sahifa topilmadi</div>
-                <div class="error-item-text">Ushbu sahifa tarmoqda yo'q</div>
+                <div class="error-item-title">@lang('messages.sorry')</div>
+                <div class="error-item-text">@lang('messages.not_found')</div>
                 <div class="error-item-link">
-                    <a href="#" class="error-item-btn">Bosh sahifa</a>
+                    <a href="/" class="error-item-btn">@lang('messages.home')</a>
                 </div>
             </div>
             <div class="error-img">

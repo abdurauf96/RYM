@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="{{ route('viewOav', $oav->slug) }}" class="documents-btn">O’qish</a>
+                <a href="{{ route('viewOav', $oav->slug) }}" class="documents-btn">@lang('messages.read')</a>
                 <!-- <button type="button" class="documents-btn">Yuklab olish</button> -->
             </div> 
             @endforeach

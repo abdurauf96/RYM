@@ -30,7 +30,7 @@
         </div>
         <div class="topic-header-social-right">
             <div class="topic-header-social-right-title">
-                Do’stlar bilan ulashing
+                @lang('messages.share')
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M18 8C19.6569 8 21 6.65685 21 5C21 3.34315 19.6569 2 18 2C16.3431 2 15 3.34315 15 5C15 6.65685 16.3431 8 18 8Z"
@@ -110,7 +110,7 @@
                             d="M10.7918 33.9166H6.16683C5.34908 33.9166 4.56482 33.5918 3.98658 33.0136C3.40835 32.4353 3.0835 31.6511 3.0835 30.8333V20.0416C3.0835 19.2239 3.40835 18.4396 3.98658 17.8614C4.56482 17.2832 5.34908 16.9583 6.16683 16.9583H10.7918M21.5835 13.875V7.70831C21.5835 6.48169 21.0962 5.3053 20.2289 4.43794C19.3615 3.57059 18.1851 3.08331 16.9585 3.08331L10.7918 16.9583V33.9166H28.1818C28.9254 33.9251 29.647 33.6644 30.2136 33.1828C30.7802 32.7012 31.1537 32.031 31.2652 31.2958L33.3927 17.4208C33.4597 16.9789 33.4299 16.5277 33.3053 16.0984C33.1807 15.6692 32.9642 15.2722 32.6709 14.9349C32.3777 14.5976 32.0145 14.3281 31.6068 14.1451C31.199 13.9621 30.7563 13.8699 30.3093 13.875H21.5835Z"
                             stroke="#009746" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                    Yoqdi
+                    @lang('messages.like')
                 </button>
             </div>
         </div>
@@ -125,7 +125,7 @@
                         <a href="#" class="news-slider-title">{{ $other->getTranslatedAttribute('title', \App::getLocale()) }}</a>
                         <p class="topic-slider-date"> {{ $other->created_at->format('d M, Y') }} </p>
                         <div class="news-slider-text">{{ $other->getTranslatedAttribute('description', \App::getLocale()) }}</div>
-                        <a href="{{ route('viewEvent', $other->slug ) }}" class="news-slider-link">Read more</a>
+                        <a href="{{ route('viewEvent', $other->slug ) }}" class="news-slider-link">@lang('messages.more')</a>
                     </div>
                     @endforeach
                     

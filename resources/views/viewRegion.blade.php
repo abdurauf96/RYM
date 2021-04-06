@@ -2,7 +2,7 @@
 
 @section('breadcrumb')
 <div class="header-pages" style="background-image: url('/images/pages-bg.png');">
-    <h1 class="header-pages-title">Hududiy bo‘linmalar</h1>
+    <h1 class="header-pages-title">{{ $district->region->getTranslatedAttribute('name', \App::getLocale()) }}</h1>
 </div>
 @endsection
 
@@ -43,9 +43,9 @@
                     @endif
                     
                     <div class="hudud-in-info">
-                        <div class="hudud-in-info-item"><strong>Manzil:</strong>{{ $district->getTranslatedAttribute('addres', \App::getLocale()) }}
+                        <div class="hudud-in-info-item"><strong>@lang('messages.addres'):</strong>{{ $district->getTranslatedAttribute('addres', \App::getLocale()) }}
                         </div>
-                        <a href="tel:{{ $district->phone }}" class="hudud-in-info-item"><strong>Telefon:</strong> {{ $district->phone }}
+                        <a href="tel:{{ $district->phone }}" class="hudud-in-info-item"><strong>@lang('messages.tel'):</strong> {{ $district->phone }}
                         </a>
                         <div class="hudud-in-info-others">
                             {!! $district->getTranslatedAttribute('body', \App::getLocale()) !!}

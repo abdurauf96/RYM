@@ -25,7 +25,7 @@
                             $file=json_decode($rule->file)[0];
                         @endphp
                         <a class="ustav-bottom-btn" href="{{ Voyager::image($file->download_link) }}" >
-                            Yuklab olish
+                           @lang('messages.download')
                         </a>
                 
                     @endif

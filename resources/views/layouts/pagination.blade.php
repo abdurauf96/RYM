@@ -18,7 +18,7 @@
             </defs>
         </svg>
 
-        Previous
+        @lang('messages.prev')
     </button>
     @else
     <a href="#" wire:click="previousPage" class="news-page-paginate-btn" >
@@ -36,7 +36,7 @@
             </defs>
         </svg>
 
-        Previous
+        @lang('messages.prev')
     </a>
         
     @endif
@@ -63,7 +63,7 @@
     </ul>
     <!-- Next Page Link -->
     @if ($paginator->hasMorePages())
-        <a  class="news-page-paginate-btn" wire:click="nextPage" href="#" >Next
+        <a  class="news-page-paginate-btn" wire:click="nextPage" href="#" >@lang('messages.next')
             <svg class="news-page-paginate-svg" width="10" height="16" viewBox="0 0 10 16" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -73,7 +73,7 @@
        
     @else
     <button class="news-page-paginate-btn">
-        Next
+        @lang('messages.next')
         <svg class="news-page-paginate-svg" width="10" height="16" viewBox="0 0 10 16" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path

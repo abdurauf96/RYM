@@ -4,12 +4,12 @@
     </div>
     <div class="rym-container">
         <div class="news-page-title-block">
-            <h2 class="title">E'lonlar</h2>
+            <h2 class="title">@lang('messages.posts')</h2>
             <div class="news-page-filter">
                 <select name="choose" wire:change="sortPosts($event.target.value)" data-placeholder="Filtrlash" class="custom-select">
-                    <option value="new">Eng yangi</option>
-                    <option value="old">Eng eski</option>
-                    <option value="best">Ommabop</option>
+                    <option value="new">@lang('messages.new')</option>
+                    <option value="old">@lang('messages.old')</option>
+                    <option value="best">@lang('messages.top')</option>
                 </select>
             </div>
         </div>
@@ -31,7 +31,7 @@
                     <!-- <p class="news-slider-date">Noyabr 12</p> -->
                     <div class="news-slider-text news-page-text">{{ $item->getTranslatedAttribute('description', \App::getLocale()) }}</div>
                     <div class="news-page-link-wrap">
-                        <a href="{{ route('viewPost', $item->slug) }}" class="news-slider-link news-page-link">Batafsil</a>
+                        <a href="{{ route('viewPost', $item->slug) }}" class="news-slider-link news-page-link">@lang('messages.more')</a>
                     </div>
                 </div>
             </div>

@@ -43,7 +43,7 @@
                     {{ $dis->phone }}
                 </a>
             </div>
-            <a href="{{ route('viewDistrict', $dis->slug) }}" class="hudud-link">Batafsil</a>
+            <a href="{{ route('viewDistrict', $dis->slug) }}" class="hudud-link">@lang('messages.more')</a>
         </div>
         @endforeach
     </div>

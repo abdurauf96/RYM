@@ -4,9 +4,9 @@
             <h2 class="title"></h2>
             <div class="news-page-filter">
                 <select name="choose" wire:change="sortImages($event.target.value)" data-placeholder="Filtrlash" class="custom-select">
-                    <option value="new">Eng yangi</option>
-                    <option value="old">Eng eski</option>
-                    <option value="best">Ommabop</option>
+                    <option value="new">@lang('messages.new')</option>
+                    <option value="old">@lang('messages.old')</option>
+                    <option value="best">@lang('messages.top')</option>
                 </select>
             </div>
         </div>
@@ -25,7 +25,7 @@
                         
                         <div class="gallery-top">
                             <div class="gallery-date">{{ $image->created_at->format('d.m.Y') }}</div>
-                            <div class="gallery-date">{{ count($decoded_images) }} rasm</div>
+                            <div class="gallery-date">{{ count($decoded_images) }} @lang('messages.photo')</div>
                         </div>
                         <div class="gallery-text">{{ $image->getTranslatedAttribute('title', \App::getLocale()) }}</div>
                     </div>

@@ -3,7 +3,7 @@
         <div class="cources-slider">
             @foreach ($best_courses as $course)
             <div class="cources-slider-item">
-                <h3 class="cources-slider-title">Eng yaxshi to‘garaklar</h3>
+                <h3 class="cources-slider-title">@lang('messages.best-courses')</h3>
                 <div class="cources-slider-info-block d-f justify-content-between align-items-center mt-1">
                     <div class="cources-slider-info">
                         <div class="cources-slider-img">
@@ -38,8 +38,8 @@
                         </div>
                     </div>
                     <div class="cources-slider-link mt-1">
-                        <a href="{{ route('viewCource', $course->slug) }}" class="cources-slider-link-data">Batafsil</a>
-                        <a href="#" class="cources-slider-link-member togarakModal" data-course="{{ $course->getTranslatedAttribute('title', \App::getLocale()) }}">A’zo bo’lish</a>
+                        <a href="{{ route('viewCource', $course->slug) }}" class="cources-slider-link-data">@lang('messages.more')</a>
+                        <a href="#" class="cources-slider-link-member togarakModal" data-course="{{ $course->getTranslatedAttribute('title', \App::getLocale()) }}">@lang('messages.signin')</a>
                     </div>
                 </div>
             </div>

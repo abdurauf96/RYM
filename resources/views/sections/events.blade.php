@@ -1,6 +1,6 @@
 <div class="events">
     <div class="rym-container">
-        <h2 class="title">Rejalashtirilgan tadbirlar</h2>
+        <h2 class="title">@lang('messages.events')</h2>
         <div class="events-block">
             @foreach ($events as $event)
             <a href="{{ route('viewEvent', $event->slug) }}" class="events-item">

@@ -1,5 +1,5 @@
 <div class="clients clients-main">
-    <div class="clients-title">Bizning hamkorlar</div>
+    <div class="clients-title">@lang('messages.partners')</div>
     <div class="rym-container">
         <div class="clients-slider">
             @foreach ($partners as $partner)

@@ -4,7 +4,7 @@
         <div class="togarak-select-wrap">
             
             <select name="choose" wire:change="sortByRegion($event.target.value)"  data-placeholder="Viloyat" class="custom-select">
-                <option value="">Viloyat</option>
+                <option value="">@lang('messages.region')</option>
                 @foreach ($regions as $region)
                 <option   value="{{ $region->id }}">{{ $region->getTranslatedAttribute('name', \App::getLocale()) }}</option>
                 @endforeach
@@ -12,7 +12,7 @@
         </div>
         <div class="togarak-select-wrap">
             <select name="choose" wire:change="sortByDistrict($event.target.value)" data-placeholder="Tuman" class="custom-select">
-                <option value="">Tuman</option>
+                <option value="">@lang('messages.district')</option>
                 @foreach ($districts as $district)
                 <option value="{{ $district->id }}">{{ $district->getTranslatedAttribute('name', \App::getLocale()) }}</option>
                 @endforeach
@@ -29,7 +29,7 @@
                     </div>
                     <div class="togarak-info-item">
                         <div class="togarak-info-name">{{ $course->getTranslatedAttribute('title', \App::getLocale()) }}</div>
-                        <div class="togarak-info-title"><span>O’qituvchi</span> {{ $course->getTranslatedAttribute('teacher_name', \App::getLocale()) }}
+                        <div class="togarak-info-title"><span>@lang('messages.teacher')</span> {{ $course->getTranslatedAttribute('teacher_name', \App::getLocale()) }}
                         </div>
                         <div class="togarak-info-text">{{ $course->getTranslatedAttribute('description', \App::getLocale()) }}</div>
                         <a href="" class="cources-slider-info-loc togarak-info-loc">
@@ -56,8 +56,8 @@
                         </a>
                     </div>
                     <div class="togarak-links d-f flex-column">
-                        <a class="cources-slider-link-member togarak-link togarakModal" data-course="{{ $course->getTranslatedAttribute('title', \App::getLocale()) }}">A’zo bo’lish</a>
-                        <a href="{{ route('viewCource', $course->slug) }}" class="cources-slider-link-member togarak-link mt-l">Batafsil</a>
+                        <a class="cources-slider-link-member togarak-link togarakModal" data-course="{{ $course->getTranslatedAttribute('title', \App::getLocale()) }}">@lang('messages.signin')</a>
+                        <a href="{{ route('viewCource', $course->slug) }}" class="cources-slider-link-member togarak-link mt-l">@lang('messages.more')</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
         
     </div>
     <div class="togarak-in-btn-wrap">
-        <a href="#" wire:click.prevent="loadMore" class="togarak-in-btn">Yana</a>
+        <a href="#" wire:click.prevent="loadMore" class="togarak-in-btn">@lang('messages.loadmore')</a>
     </div>
     
 </div>

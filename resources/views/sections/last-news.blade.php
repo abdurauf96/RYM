@@ -1,6 +1,6 @@
 <div class="last-news">
     <div class="rym-container">
-        <div class="last-news-title wh-col">So’nggi yangiliklar</div>
+        <div class="last-news-title wh-col">@lang('messages.latest-news')</div>
         <div class="last-news-block d-f justify-content-between">
             @foreach ($latest_news as $latest_new)
             <div class="last-news-item d-f align-items-center">
